@@ -41,7 +41,13 @@
     ],
     "answer": "L_max about 33.0 m; choice b, 33 เมตร.",
     "cleanAnswer": "Choice B : 33 เมตร",
-    "correctChoiceLetter": "b"
+    "correctChoiceLetter": "b",
+    "shortcut": "H=L+x,\\qquad mgH=(1/2)kx^2,\\qquad L_{max}=H-(2mgH/k)^{1/2}",
+    "goal": "A jumper falls from height H on a Hooke-law rope of unknown free length L, spring constant k, and mass m; asks for the longest safe free rope length with zero speed at the ground.",
+    "steps": [
+      "The full fall is H=L+x. At the lowest safe point, kinetic energy is zero, so mgH=(1/2)kx^2. Thus x=sqrt(2mgH/k)=sqrt(2(60 kg)(9.8 m/s^2)(36 m)/(4800 N/m))=sqrt(8.82 m^2)=2.9698 m. The greatest free rope length is L=36-2.9698=33.0302 m. The matching printed option is 33 m."
+    ],
+    "note": "The energy uses the full gravitational drop H while the spring stretches only x=H-L. Do not put L in the spring energy term."
   },
   {
     "id": "CB-02",
@@ -107,7 +113,13 @@
     ],
     "answer": "f=r sqrt(rho g/(4 pi m)) Hz; choice 1, option CB-02-a.",
     "cleanAnswer": "Choice A : $r\\sqrt{\\frac{\\rho g}{4\\pi m}}$",
-    "correctChoiceLetter": "a"
+    "correctChoiceLetter": "a",
+    "shortcut": "A=\\pi r^2,\\qquad k_{\\mathrm{eff}}=\\rho g A,\\qquad f=\\frac{1}{2\\pi}\\sqrt{\\frac{k_{\\mathrm{eff}}}{m}}=r\\sqrt{\\frac{\\rho g}{4\\pi m}}",
+    "goal": "A spherical ball of mass m floats half above a liquid of density rho; a tiny downward push makes it bob; asked for cycles per second.",
+    "steps": [
+      "A small downward displacement y increases submerged volume by Delta V≈Ay=pi r^2 y. Extra upward buoyancy gives restoring force F=-rho g Delta V=-(rho g pi r^2)y, so k_eff=rho g pi r^2. Then f=(1/(2pi))sqrt(k_eff/m)=(1/(2pi))sqrt(rho g pi r^2/m)=r sqrt(rho g/(4pi m)). This matches the first graphical option. Its dimensions are s^-1 because r sqrt(rho g/m) is m times 1/(m s)."
+    ],
+    "note": "The asked 'times per second' is frequency, not period. The correct source option has radius r outside the square root and 4 pi m inside; omitting r destroys the units."
   },
   {
     "id": "CB-03",
@@ -167,7 +179,13 @@
     ],
     "answer": "((rho_0-rho)/rho_0)*100%; choice 3, option CB-03-c.",
     "cleanAnswer": "Choice C : $\\left(\\frac{\\rho_0 - \\rho}{\\rho_0}\\right) \\times 100\\%$",
-    "correctChoiceLetter": "c"
+    "correctChoiceLetter": "c",
+    "shortcut": "\\rho_0 gV_{\\mathrm{sub}}=\\rho gV,\\qquad \\%V_{\\mathrm{above}}=\\frac{\\rho_0-\\rho}{\\rho_0}\\times100\\%",
+    "goal": "Ice density rho floats in water density rho_0; asked for percent of the ice volume above the surface.",
+    "steps": [
+      "Floating balance gives rho_0 g V_sub = rho g V. Cancel g and divide by rho_0 V: V_sub/V = rho/rho_0. Above-water fraction is (V-V_sub)/V = 1-rho/rho_0 = (rho_0-rho)/rho_0. Multiply by 100% to obtain the answer, matching original PDF choice 3."
+    ],
+    "note": "The density ratio rho/rho_0 gives the submerged fraction. The question asks for the portion above, so subtract that fraction from one. The PDF's correct image option is number 3; earlier text transcription had mislabeled the formulas."
   },
   {
     "id": "CB-04",
@@ -188,7 +206,13 @@
     "options": [],
     "answer": "5 m from the cliff top under the stated piecewise wave-speed model; no matching printed choice.",
     "cleanAnswer": "5 m (จากยอดหน้าผา — no printed choice matches)",
-    "correctChoiceLetter": null
+    "correctChoiceLetter": null,
+    "shortcut": "v=\\sqrt{T/\\mu},\\qquad v_1=2v_2,\\qquad \\frac{x}{v_2}=\\frac{4}{v_1}+\\frac{8-x}{v_2}",
+    "goal": "Upper rope: 8 m and 800 g/m; lower rope: 4 m and 200 g/m; both endpoints send pulses simultaneously; find meeting point from top.",
+    "steps": [
+      "Let v_2=v and v_1=2v. Lower pulse takes 4/(2v)=2/v to reach knot. In that time upper pulse moves 2 m, leaving a 6 m gap in the upper rope. Both then move toward each other at v, so each travels 3 m more; meeting point is 2+3=5 m from the top. Equivalently x/v=4/(2v)+(8-x)/v gives x=5 m. Original PDF page 4 offers 2 m, 4 m, 6 m, or the knot; none is 5 m. The PDF displays choice 2 selected, but this is a recorded response, not proof of a correct key."
+    ],
+    "note": "Do not apply v_1/v_2=2 over the full 12 m. The lower pulse crosses the knot before the two meet. The physically derived 5 m is not among the original four choices."
   },
   {
     "id": "CB-05",
@@ -254,7 +278,13 @@
     ],
     "answer": "Under the exam's full-sphere-area model, R=sqrt(F/(4 pi P_a)); source choice 1 (CB-05-a).",
     "cleanAnswer": "Choice A : $R = \\sqrt{\\frac{F}{4\\pi P_a}}$",
-    "correctChoiceLetter": "a"
+    "correctChoiceLetter": "a",
+    "shortcut": "P=F/A,\\qquad A=4\\pi R^2,\\qquad R=\\sqrt{F/(4\\pi P_a)}",
+    "goal": "Find maximum balloon radius R from allowed force F and atmospheric pressure P_a; printed exam convention uses the full spherical surface area.",
+    "steps": [
+      "Pressure relation P=F/A gives F=P_a A under the printed exam's area convention. Insert sphere area A=4 pi R^2: F=4 pi P_a R^2. Divide by 4 pi P_a and take square root: R=sqrt(F/(4 pi P_a)). This matches original image choice 1. It is conditional on the stated exam shortcut; the problem lacks enough real balloon mechanics to derive bursting uniquely."
+    ],
+    "note": "The radius must have units of metres, so F/P_a must be under the square root. Choice 1 has 4 pi from sphere surface area; choice 2 has pi from a projected disc and uses a different model."
   },
   {
     "id": "CB-06",
@@ -298,7 +328,13 @@
     ],
     "answer": "Approximately 9 cm higher; source choice 3 (CB-06-c).",
     "cleanAnswer": "Choice C : 9 cm",
-    "correctChoiceLetter": "c"
+    "correctChoiceLetter": "c",
+    "shortcut": "mg=\\rho_w g A\\Delta h,\\qquad A=L^2,\\qquad \\Delta h=\\frac{m}{\\rho_w L^2}",
+    "goal": "A man leaves a floating cubical ice block; find how much higher it rises.",
+    "steps": [
+      "Removed man's weight mg equals the decrease in buoyancy rho_w g A Delta h. Cancel g and use A=(0.80 m)^2=0.64 m^2. Delta h=60/(1000*0.64) m=0.09375 m=9.375 cm, approximately 9 cm, printed choice 3."
+    ],
+    "note": "Use the change in load only; no ice density or ice mass is required. Convert 80 cm to 0.80 m before squaring."
   },
   {
     "id": "CB-07",
@@ -342,7 +378,13 @@
     ],
     "answer": "Approximately 67 cm; source choice 2 (CB-07-b).",
     "cleanAnswer": "Choice B : 67 cm",
-    "correctChoiceLetter": "b"
+    "correctChoiceLetter": "b",
+    "shortcut": "v\\approx331+0.6T_C,\\qquad f_1=\\frac{v}{2L},\\qquad L=\\frac{v}{2f_1}",
+    "goal": "Uniform Thai bamboo flute, all finger holes closed, lowest frequency 259.5 Hz at 25 C; find tube length.",
+    "steps": [
+      "Sound speed v=331+0.6(25)=346 m/s. Open-open fundamental has f_1=v/(2L), so L=346/[2(259.5)] m=346/519 m=0.6667 m=66.67 cm, approximately 67 cm, printed choice 2."
+    ],
+    "note": "Do not use L=v/(4f), which is for a tube closed at one end. Convert final metres to centimetres."
   },
   {
     "id": "CB-08",
@@ -386,7 +428,13 @@
     ],
     "answer": "Under the exam's d≈lambda rule, 20 m; source choice 4 (CB-08-d).",
     "cleanAnswer": "Choice D : 20 m",
-    "correctChoiceLetter": "d"
+    "correctChoiceLetter": "d",
+    "shortcut": "v\\approx331+0.6T_C,\\qquad v=f\\lambda,\\qquad d\\approx\\lambda=\\frac{v}{f}",
+    "goal": "Two speakers at 25 C emit 17.3 Hz sound; exam asks separation for good diffraction.",
+    "steps": [
+      "At 25 C, v≈331+0.6(25)=346 m/s. The wave relation v=f lambda gives lambda=346/17.3=20 m. Under the intended d≈lambda exam rule, d≈20 m, choice 4."
+    ],
+    "note": "Do not confuse frequency with wavelength; divide 346 m/s by 17.3 Hz. The physical design phrase is vague, so use the source's intended wavelength match for this MCQ."
   },
   {
     "id": "CB-09",
@@ -430,7 +478,13 @@
     ],
     "answer": "Statements ก and ค; source choice 2 (CB-09-b).",
     "cleanAnswer": "Choice B : ข้อ ก. และ ค. กล่าวถูกต้อง",
-    "correctChoiceLetter": "b"
+    "correctChoiceLetter": "b",
+    "shortcut": "a=-\\omega^2x,\\qquad K=\\tfrac12mv^2,\\qquad U=\\tfrac12kx^2",
+    "goal": "Three statements: displacement-acceleration relation, kinetic energy at equilibrium, potential energy at maximum displacement. Choose the true statements.",
+    "steps": [
+      "ก true by a=-omega^2 x (constant proportionality). ข false because equilibrium has maximum speed and K. ค true because at |x|=A, v=0 and U is maximal. Thus ก and ค, printed choice 2."
+    ],
+    "note": "At the centre speed and kinetic energy are maximum, not minimum. At the turning points speed is zero and potential energy is maximum."
   },
   {
     "id": "CB-10",
@@ -480,7 +534,13 @@
     ],
     "answer": "Approximately 0.8 Hz; source choice 2 (CB-10-b).",
     "cleanAnswer": "Choice B : 0.8 Hz",
-    "correctChoiceLetter": "b"
+    "correctChoiceLetter": "b",
+    "shortcut": "mg(h+x)=\\tfrac12kx^2,\\qquad \\frac{k}{m}=\\frac{2g(h+x)}{x^2},\\qquad f=\\frac{1}{2\\pi}\\sqrt{\\frac{k}{m}}",
+    "goal": "A mass drops h=3 m before touching a spring, then compresses it x=2 m; find SHM cycles per second without given m or k.",
+    "steps": [
+      "Energy from release to maximum compression gives mg(3+2)=(1/2)k(2)^2, so k/m=2g(5)/4=24.5 s^-2 using g=9.8 m/s^2. f=(1/(2pi))sqrt(k/m)=sqrt(24.5)/(2pi)=0.7878 Hz, approximately 0.8 Hz, printed choice 2."
+    ],
+    "note": "The total gravitational drop is h+x=5 m, not h=3 m. The question asks frequency f, not angular frequency omega."
   },
   {
     "id": "CB-11",
@@ -524,7 +584,13 @@
     ],
     "answer": "Statements ข and ค; source choice 2 (CB-11-b).",
     "cleanAnswer": "Choice B : ข และ ค",
-    "correctChoiceLetter": "b"
+    "correctChoiceLetter": "b",
+    "shortcut": "P_{\\mathrm{gauge}}=\\rho gh,\\qquad P_{\\mathrm{abs}}=P_{\\mathrm{atm}}+\\rho gh",
+    "goal": "Evaluate four liquid-pressure statements: direction of pressure, dependence on liquid, gauge pressure versus depth, and dependence on free-surface area.",
+    "steps": [
+      "ก false because pressure is scalar; pressure force is normal to the contact surface. ข true because rho depends on liquid type and pressure varies with rho. ค true from P_gauge=rho g h. ง false because exposed surface area does not appear in hydrostatic pressure. Thus ข and ค, source choice 2."
+    ],
+    "note": "Statement ก says pressure has a direction, which is false. Do not confuse ความดัน (pressure) with แรงดัน (force from pressure)."
   },
   {
     "id": "CB-12",
@@ -568,7 +634,13 @@
     ],
     "answer": "Statements ก and ค; source choice 2 (CB-12-b).",
     "cleanAnswer": "Choice B : ก และ ค",
-    "correctChoiceLetter": "b"
+    "correctChoiceLetter": "b",
+    "shortcut": "P_{\\mathrm{abs}}=P_{\\mathrm{atm}}+\\rho gh,\\qquad P_{\\mathrm{gauge}}=\\rho gh",
+    "goal": "Five liquid-pressure statements ask what depends on depth, direction, liquid type, volume, and atmosphere for gauge pressure.",
+    "steps": [
+      "ก true by depth h. ข false because pressure is scalar and only pressure force is normal to a wall. ค true by liquid density rho. ง false because hydrostatic pressure does not depend on total liquid volume or vessel shape. จ false because gauge pressure rho g h excludes atmosphere. Thus ก and ค, original choice 2."
+    ],
+    "note": "Statement ข falsely assigns a direction to pressure. Statement จ falsely makes gauge pressure depend on P_atm; P_atm has already been subtracted."
   },
   {
     "id": "CB-13",
@@ -618,7 +690,13 @@
     ],
     "answer": "Equal bottom pressure; unequal total water weight. Source choice 1 (CB-13-a).",
     "cleanAnswer": "Choice A : ความดันที่ก้นภาชนะทั้งสามใบมีค่าเท่ากัน แต่น้ำหนักของน้ำในภาชนะแต่ละใบมีค่าไม่เท่ากัน",
-    "correctChoiceLetter": "a"
+    "correctChoiceLetter": "a",
+    "shortcut": "P_{\\mathrm{bottom}}=P_{\\mathrm{atm}}+\\rho gh,\\qquad W=\\rho Vg",
+    "goal": "Three differently shaped open vessels hold the same liquid to the same height, but water volumes differ; compare bottom pressure and total water weight.",
+    "steps": [
+      "Same rho and h give equal P_bottom=P_atm+rho g h. Unequal volumes give unequal W=rho V g. Thus bottom pressure equal and water weights unequal, printed choice 1."
+    ],
+    "note": "Do not infer bottom pressure from total water volume or weight. Hydrostatic pressure depends on depth, while total water weight depends on volume."
   },
   {
     "id": "CB-14",
@@ -678,7 +756,13 @@
     ],
     "answer": "v(t)=v_0+[F_0/(m omega)] sin(omega t); source choice 4 (CB-14-d).",
     "cleanAnswer": "Choice D : $v = \\frac{F_0}{m\\omega} \\sin(\\omega t) + v_0$",
-    "correctChoiceLetter": "d"
+    "correctChoiceLetter": "d",
+    "shortcut": "m\\frac{dv}{dt}=F_0\\cos(\\omega t),\\qquad v(t)=v_0+\\frac{F_0}{m\\omega}\\sin(\\omega t)",
+    "goal": "Force F(t)=F_0 cos(omega t) acts on mass m with initial velocity v_0; find v(t).",
+    "steps": [
+      "Newton's law gives dv/dt=(F_0/m)cos(omega t). Integrating from 0 to t gives v(t)-v_0=(F_0/m)[sin(omega t)/omega]. Thus v(t)=v_0+[F_0/(m omega)]sin(omega t), original graphical choice 4. At t=0, sine is zero and v=v_0."
+    ],
+    "note": "Integrating cos(omega t) brings a 1/omega factor and a positive sine. Add v_0; at t=0 the answer must return v_0. The actual PDF choice 4 has this expression; an earlier textual transcription mislabeled its location."
   },
   {
     "id": "CB-15",
@@ -738,7 +822,13 @@
     ],
     "answer": "a=-omega^2 A cos(omega t+phi)=-omega^2 x; source choice 3 (CB-15-c).",
     "cleanAnswer": "Choice C : $-\\omega^2 A\\cos(\\omega t+\\phi)$",
-    "correctChoiceLetter": "c"
+    "correctChoiceLetter": "c",
+    "shortcut": "v=\\frac{dx}{dt}=-\\omega A\\sin(\\omega t+\\phi),\\qquad a=\\frac{d^2x}{dt^2}=-\\omega^2A\\cos(\\omega t+\\phi)=-\\omega^2x",
+    "goal": "Given position x=A cos(omega t+phi), find acceleration; choose among original graphical formulas.",
+    "steps": [
+      "Differentiate x=A cos(omega t+phi): v=-omega A sin(omega t+phi). Differentiate again: a=-omega^2 A cos(omega t+phi)=-omega^2 x. This exactly matches original image choice 3; option 2 includes an extra r factor."
+    ],
+    "note": "Differentiate twice and keep the negative sign. The actual PDF's correct formula is graphical choice 3; an earlier extracted text incorrectly labeled it as choice 1."
   },
   {
     "id": "TH-01",
@@ -782,7 +872,13 @@
     ],
     "answer": "Choice c: ice at -20 C and burning torch at 233 C.",
     "cleanAnswer": "Choice C : ก้อนน้ำแข็งที่อุณหภูมิ -20°C กับคบเพลิงที่กำลังลุกไหม้ที่อุณหภูมิ 233°C",
-    "correctChoiceLetter": "c"
+    "correctChoiceLetter": "c",
+    "shortcut": "T(\\mathrm{K})=t_C({}^\\circ\\mathrm{C})+273.15,\\qquad T_{\\mathrm{hot}}/T_{\\mathrm{cold}}\\approx2",
+    "goal": "Which given Celsius-temperature pair has one material at twice the absolute temperature of the other?",
+    "steps": [
+      "Convert each pair: a 373.15/323.15≈1.155; b 373.15/223.15≈1.672; c (233+273.15)/(-20+273.15)=506.15/253.15≈1.9994≈2. Thus choice c. With the rounded 273 K offset, 506/253=2 exactly."
+    ],
+    "note": "Do not double Celsius numbers directly: 100 C is not twice 50 C in absolute temperature."
   },
   {
     "id": "TH-02",
@@ -826,7 +922,13 @@
     ],
     "answer": "99.4 cm^3; choice a (TH-02-a).",
     "cleanAnswer": "Choice A : 99.4 cm³",
-    "correctChoiceLetter": "a"
+    "correctChoiceLetter": "a",
+    "shortcut": "\\Delta V_{\\mathrm{spill}}=V_0(\\beta_{\\ell}-3\\alpha_c)\\Delta T",
+    "goal": "A full aluminum container and its turpentine both heat up; asked for spilled volume.",
+    "steps": [
+      "V_0=2000 cm^3 and Delta T=80-20=60 C. Liquid gain=(2000)(9.00e-4)(60)=108 cm^3. Container gain=(2000)(3*24.0e-6)(60)=8.64 cm^3. Spill=108-8.64=99.36 cm^3≈99.4 cm^3, source choice a."
+    ],
+    "note": "The container expands too, so subtract its capacity increase. Use 3 alpha for volume, not alpha."
   },
   {
     "id": "TH-03",
@@ -870,7 +972,14 @@
     ],
     "answer": "29.6°C — choice b.",
     "cleanAnswer": "Choice B : 29.6°C",
-    "correctChoiceLetter": "b"
+    "correctChoiceLetter": "b",
+    "shortcut": "Q_{\\text{lost}}=Q_{\\text{gained}},\\quad m_i c_i(600-T_f)=m_w c_w(T_f-25)",
+    "goal": "Final temperature of iron + water.",
+    "steps": [
+      "Heat capacity of iron: $1.50(448)=672\\,\\mathrm{J/^{\\circ}C}$; water: $20.0(4186)=83{,}720\\,\\mathrm{J/^{\\circ}C}$.",
+      "The hot iron cools as the water warms, so $T_f=[672(600)+83{,}720(25)]/(672+83{,}720)=29.58^{\\circ}\\mathrm C$."
+    ],
+    "note": "Use the heat capacities as weights; a simple average of 600°C and 25°C is wrong."
   },
   {
     "id": "TH-04",
@@ -914,7 +1023,14 @@
     ],
     "answer": "12.9 g — choice d.",
     "cleanAnswer": "Choice D : 12.9 g",
-    "correctChoiceLetter": "d"
+    "correctChoiceLetter": "d",
+    "shortcut": "(m_{\\rm Cu}c_{\\rm Cu}+m_wc_w)(T_f-T_i)=m_s[L_v+c_w(100-T_f)]",
+    "goal": "Mass of steam needed to warm copper and water to 50°C.",
+    "steps": [
+      "Copper and water need $[(0.0500)(387)+(0.250)(4186)](30)=31{,}975.5\\,\\mathrm J$.",
+      "Each kilogram of steam gives $2.26\\times10^6+4186(50)=2{,}469{,}300\\,\\mathrm{J/kg}$, so $m_s=31{,}975.5/2{,}469{,}300=0.01295\\,\\mathrm{kg}$."
+    ],
+    "note": "Steam releases heat twice: condensation, then liquid water cooling from 100°C to 50°C."
   },
   {
     "id": "TH-05",
@@ -958,7 +1074,14 @@
     ],
     "answer": "667 W — choice a, if k = 0.80 W/(m·K).",
     "cleanAnswer": "Choice A : 667 W",
-    "correctChoiceLetter": "a"
+    "correctChoiceLetter": "a",
+    "shortcut": "P=\\frac{kA\\Delta T}{L}",
+    "goal": "Minimum heater power through a concrete slab.",
+    "steps": [
+      "Convert thickness: $L=12.0\\,\\mathrm{cm}=0.120\\,\\mathrm m$.",
+      "Using $k=0.80\\,\\mathrm{W/(m\\,K)}$, $P=0.80(5.00)(20.0)/0.120=667\\,\\mathrm W$."
+    ],
+    "note": "The question omits concrete's conductivity k; the numerical choice assumes the standard table value 0.80."
   },
   {
     "id": "IG-01",
@@ -1002,7 +1125,14 @@
     ],
     "answer": "2.0 cm³ — choice a.",
     "cleanAnswer": "Choice A : 2.0 cm³",
-    "correctChoiceLetter": "a"
+    "correctChoiceLetter": "a",
+    "shortcut": "\\frac{P_1V_1}{T_1}=\\frac{P_2V_2}{T_2},\\quad V_2=V_1\\frac{P_1}{P_2}\\frac{T_2}{T_1}",
+    "goal": "New gas volume after pressure and temperature change.",
+    "steps": [
+      "STP gives $P_1=1\\,\\mathrm{atm},\\ T_1=273\\,\\mathrm K$; final temperature is $40+273=313\\,\\mathrm K$.",
+      "$V_2=4.0(1/2.3)(313/273)\\approx2.0\\,\\mathrm{cm^3}$."
+    ],
+    "note": "Gas-law temperature ratios require kelvin."
   },
   {
     "id": "IG-02",
@@ -1046,7 +1176,14 @@
     ],
     "answer": "Helium, 0.002 mol, 300 K, 300 cm³ — choice c.",
     "cleanAnswer": "Choice C : ก๊าซฮีเลียม 0.002 โมล ที่อุณหภูมิ 300 K ปริมาตร 300 cm³",
-    "correctChoiceLetter": "c"
+    "correctChoiceLetter": "c",
+    "shortcut": "P=\\frac{nRT}{V}\\quad\\Rightarrow\\quad P\\propto\\frac{nT}{V}",
+    "goal": "Choose the lowest-pressure gas sample.",
+    "steps": [
+      "Compare only $nT/V$, since $R$ is common to every choice.",
+      "Values for a, b, c, d are $0.006,\\ 0.006,\\ 0.002,\\ 0.006$; c is lowest."
+    ],
+    "note": "Gas identity does not affect ideal-gas pressure when n, T and V are given."
   },
   {
     "id": "IG-03",
@@ -1090,7 +1227,15 @@
     ],
     "answer": "√3 times the original speed — choice c.",
     "cleanAnswer": "Choice C : มีค่าเป็น √3 เท่าของอัตราเร็วเดิม",
-    "correctChoiceLetter": "c"
+    "correctChoiceLetter": "c",
+    "shortcut": "v_{\\rm rms}=\\sqrt{\\frac{3RT}{M}}\\quad\\Rightarrow\\quad\\frac{v_{{\\rm rms},2}}{v_{{\\rm rms},1}}=\\sqrt{\\frac{T_2}{T_1}}",
+    "goal": "Factor change in rms molecular speed.",
+    "steps": [
+      "From kinetic theory, $v_{\\rm rms}=\\sqrt{3RT/M}$, so speed is directly proportional to $\\sqrt{T}$.",
+      "Temperature ratio is $T_2/T_1 = 600/200 = 3$.",
+      "Speed ratio is $\\sqrt{T_2/T_1} = \\sqrt{3} \\approx 1.73$."
+    ],
+    "note": "Ordinary formula: v_rms = √(3RT/M) ∝ √T. The source's “√3” is a corrupted rendering of √3. Constant pressure is irrelevant here."
   },
   {
     "id": "IG-04",
@@ -1134,7 +1279,14 @@
     ],
     "answer": "3.32 mol — choice a.",
     "cleanAnswer": "Choice A : 3.32 mol",
-    "correctChoiceLetter": "a"
+    "correctChoiceLetter": "a",
+    "shortcut": "PV=Nk_BT=\\frac{2}{3}N\\bar\\epsilon,\\quad n=\\frac{3PV}{2N_A\\bar\\epsilon}",
+    "goal": "Moles of helium from P, V and energy per atom.",
+    "steps": [
+      "Convert $V=4.00\\times10^3\\,\\mathrm{cm^3}=4.00\\times10^{-3}\\,\\mathrm{m^3}$, so $PV=480\\,\\mathrm J$.",
+      "$N=3(480)/[2(3.60\\times10^{-22})]=2.00\\times10^{24}$ atoms; $n=N/N_A=3.32\\,\\mathrm{mol}$."
+    ],
+    "note": "Divide atom count by Avogadro's number to get moles."
   },
   {
     "id": "IG-05",
@@ -1178,7 +1330,14 @@
     ],
     "answer": "7.97 × 10⁻²¹ J — choice d.",
     "cleanAnswer": "Choice D : $7.97 \\times 10^{-21}\\text{ J}$",
-    "correctChoiceLetter": "d"
+    "correctChoiceLetter": "d",
+    "shortcut": "\\bar\\epsilon=\\frac{3PV}{2nN_A}",
+    "goal": "Average translational kinetic energy per molecule.",
+    "steps": [
+      "Convert $V=7.00\\,\\mathrm L=7.00\\times10^{-3}\\,\\mathrm{m^3}$; then $PV=11{,}200\\,\\mathrm J$.",
+      "$\\bar\\epsilon=3(11{,}200)/[2(3.50)(6.022\\times10^{23})]=7.97\\times10^{-21}\\,\\mathrm J$."
+    ],
+    "note": "The question asks per molecule, so divide by total molecules nN_A."
   },
   {
     "id": "TD-01",
@@ -1222,7 +1381,14 @@
     ],
     "answer": "−466 J — choice d (course sign convention).",
     "cleanAnswer": "Choice D : -466 J",
-    "correctChoiceLetter": "d"
+    "correctChoiceLetter": "d",
+    "shortcut": "W_{\\rm by}=nR\\Delta T,\\quad W_{\\rm on}=-nR\\Delta T",
+    "goal": "Work for gas heated at constant pressure.",
+    "steps": [
+      "Temperature rise is $300-20=280\\,\\mathrm K$.",
+      "$|W|=(0.2)(8.314)(280)=466\\,\\mathrm J$; the course key uses work on the gas, so expansion makes it negative."
+    ],
+    "note": "Work by gas is +466 J; the selected course convention reports work on gas as −466 J."
   },
   {
     "id": "TD-02",
@@ -1272,7 +1438,14 @@
     ],
     "answer": "−12 × 10⁶ J — choice c.",
     "cleanAnswer": "Choice C : $-12 \\times 10^6\\text{ J}$",
-    "correctChoiceLetter": "c"
+    "correctChoiceLetter": "c",
+    "shortcut": "W_{\\rm on}=-\\text{area under the }P\\text{–}V\\text{ path}",
+    "goal": "Work done on gas from a P–V graph.",
+    "steps": [
+      "Three areas from the graph: $6\\times1=6$, trapezoid $(6+2)\\times1/2=4$, and $2\\times1=2$, each in $10^6\\,\\mathrm J$.",
+      "Total area is $12\\times10^6\\,\\mathrm J$; expansion means work on gas is negative."
+    ],
+    "note": "Count the whole trapezoid under the sloping segment, not only its triangular top."
   },
   {
     "id": "TD-03",
@@ -1316,7 +1489,14 @@
     ],
     "answer": "+7.5 kJ — choice a.",
     "cleanAnswer": "Choice A : 7.5 kJ",
-    "correctChoiceLetter": "a"
+    "correctChoiceLetter": "a",
+    "shortcut": "\\Delta U=Q-W_{\\rm by}=Q-P\\Delta V",
+    "goal": "Change in gas internal energy.",
+    "steps": [
+      "$\\Delta V=3-1=2\\,\\mathrm{m^3}$, so $W_{\rm by}=(2.50\\,\\mathrm{kPa})(2\\,\\mathrm{m^3})=5.0\\,\\mathrm{kJ}$.",
+      "$\\Delta U=12.5-5.0=7.5\\,\\mathrm{kJ}$."
+    ],
+    "note": "The given initial temperature is not needed."
   },
   {
     "id": "TD-04",
@@ -1360,7 +1540,15 @@
     ],
     "answer": "10.7 kJ — choice b.",
     "cleanAnswer": "Choice B : 10.7 kJ",
-    "correctChoiceLetter": "b"
+    "correctChoiceLetter": "b",
+    "shortcut": "\\eta=\\frac{W}{Q_h}=\\frac{Q_h-Q_c}{Q_h}=1-\\frac{Q_c}{Q_h}\\quad\\Rightarrow\\quad Q_h=\\frac{Q_c}{1-\\eta}",
+    "goal": "Heat input to an engine from efficiency and waste heat.",
+    "steps": [
+      "Efficiency is useful work over total heat: $\\eta=\\frac{W}{Q_h}=\\frac{Q_h-Q_c}{Q_h}=1-\\frac{Q_c}{Q_h}$.",
+      "Solve for input heat $Q_h$: $1-\\eta=\\frac{Q_c}{Q_h}\\implies Q_h=\\frac{Q_c}{1-\\eta}$.",
+      "Substitute waste heat $Q_c=8\\,\\mathrm{kJ}$ and $\\eta=0.25$: $Q_h=\\frac{8}{1-0.25}=\\frac{8}{0.75}=10.7\\,\\mathrm{kJ}$."
+    ],
+    "note": "Efficiency measures what you get (W) vs what you pay for (Q_h). The 8 kJ is waste heat Q_c expelled to the cold reservoir, not work."
   },
   {
     "id": "TD-05",
@@ -1404,7 +1592,14 @@
     ],
     "answer": "−610 J/K — choice c.",
     "cleanAnswer": "Choice C : -610 J/K",
-    "correctChoiceLetter": "c"
+    "correctChoiceLetter": "c",
+    "shortcut": "\\Delta S_{\\rm water}=\\frac{Q_{\\rm rev}}{T}=-\\frac{mL_f}{T}",
+    "goal": "Entropy change when water freezes at 0°C.",
+    "steps": [
+      "Use $m=0.500\\,\\mathrm{kg}$, $T=273.15\\,\\mathrm K$, and standard $L_f=3.33\\times10^5\\,\\mathrm{J/kg}$.",
+      "$\\Delta S=-(0.500)(3.33\\times10^5)/273.15\\approx-610\\,\\mathrm{J/K}$."
+    ],
+    "note": "The prompt omits L_f and the initial cooling temperature; the key evaluates only freezing at 0°C."
   },
   {
     "id": "Q4-01",
@@ -1448,7 +1643,14 @@
     ],
     "answer": "−274 °F — choice d.",
     "cleanAnswer": "Choice D : -274 °F",
-    "correctChoiceLetter": "d"
+    "correctChoiceLetter": "d",
+    "shortcut": "T_C=T_K-273.15,\\quad T_F=\\frac95T_C+32",
+    "goal": "Convert 103 K to Fahrenheit.",
+    "steps": [
+      "$T_C=103-273.15=-170.15^{\\circ}\\mathrm C$.",
+      "$T_F=(9/5)(-170.15)+32=-274.27^{\\circ}\\mathrm F$."
+    ],
+    "note": "Convert kelvin to Celsius before Fahrenheit."
   },
   {
     "id": "Q4-02",
@@ -1492,7 +1694,14 @@
     ],
     "answer": "About 78 cm³ — choice b.",
     "cleanAnswer": "Choice B : 78 cm³",
-    "correctChoiceLetter": "b"
+    "correctChoiceLetter": "b",
+    "shortcut": "V_{\\rm overflow}=V_0(\\beta_{\\rm oil}-3\\alpha_{\\rm steel})\\Delta T",
+    "goal": "Oil overflow when both oil and steel tank expand.",
+    "steps": [
+      "$\\Delta T=100-20=80^{\\circ}\\mathrm C$; the tank's volume coefficient is $3\\alpha=3(10\\times10^{-6})\\,^{\\circ}\\mathrm C^{-1}$.",
+      "$V_{\rm overflow}=1000[10\\times10^{-4}-3(10\\times10^{-6})](80)=77.6\\,\\mathrm{cm^3}$."
+    ],
+    "note": "Subtract the expansion of the container capacity."
   },
   {
     "id": "Q4-03",
@@ -1536,7 +1745,14 @@
     ],
     "answer": "Heating steam from 100°C to 140°C — choice c.",
     "cleanAnswer": "Choice C : อุณหภูมิของไอน้ำเพิ่มจาก 100°C เป็น 140°C",
-    "correctChoiceLetter": "c"
+    "correctChoiceLetter": "c",
+    "shortcut": "Q_{\\rm heat}=mc\\Delta T,\\quad Q_{\\rm phase}=mL",
+    "goal": "Which step from ice at 0°C to steam at 140°C needs the least energy?",
+    "steps": [
+      "For 1 g: melting $=333\\,\\mathrm J$; heating liquid 0→100°C $=420\\,\\mathrm J$.",
+      "Vaporizing $=2260\\,\\mathrm J$; heating steam 100→140°C $=0.001(2000)(40)=80\\,\\mathrm J$, the smallest."
+    ],
+    "note": "Compare the energy of each stage, not the temperature difference alone."
   },
   {
     "id": "Q4-04",
@@ -1580,7 +1796,14 @@
     ],
     "answer": "29.6°C — choice a.",
     "cleanAnswer": "Choice A : 29.6°C",
-    "correctChoiceLetter": "a"
+    "correctChoiceLetter": "a",
+    "shortcut": "m_i c_i(600-T_f)=m_w c_w(T_f-25)",
+    "goal": "Final temperature of iron + water (same pattern as TH-03).",
+    "steps": [
+      "Heat capacities: iron $=1.50(448)=672\\,\\mathrm{J/^{\\circ}C}$; water $=20.0(4186)=83{,}720\\,\\mathrm{J/^{\\circ}C}$.",
+      "$T_f=[672(600)+83{,}720(25)]/(672+83{,}720)=29.58^{\\circ}\\mathrm C$."
+    ],
+    "note": "This repeats TH-03, but the choice letter is different."
   },
   {
     "id": "Q4-05",
@@ -1624,7 +1847,14 @@
     ],
     "answer": "3.9 atm — choice a.",
     "cleanAnswer": "Choice A : 3.9 atm",
-    "correctChoiceLetter": "a"
+    "correctChoiceLetter": "a",
+    "shortcut": "P_2=P_1\\frac{n_2}{n_1}\\frac{T_2}{T_1}\\quad(V\\text{ constant})",
+    "goal": "Final gas pressure after removing two thirds and heating in a fixed tank.",
+    "steps": [
+      "Removing two thirds leaves $n_2/n_1=1/3$; convert temperatures: $T_1=300\\,\\mathrm K$, $T_2=350\\,\\mathrm K$.",
+      "$P_2=10(1/3)(350/300)=3.89\\,\\mathrm{atm}$."
+    ],
+    "note": "“Pumped out two thirds” means one third remains."
   },
   {
     "id": "Q4-06",
@@ -1668,7 +1898,14 @@
     ],
     "answer": "1.7 MPa — choice a.",
     "cleanAnswer": "Choice A : 1.7 MPa",
-    "correctChoiceLetter": "a"
+    "correctChoiceLetter": "a",
+    "shortcut": "PV=nRT,\\quad n=\\frac{m}{M},\\quad P=\\frac{nRT}{V}",
+    "goal": "Pressure of water vapor in a 4.0 L pressure cooker.",
+    "steps": [
+      "$n=18.0/18=1.00\\,\\mathrm{mol}$, $T=527+273=800\\,\\mathrm K$, $V=4.0\\,\\mathrm L=0.0040\\,\\mathrm{m^3}$.",
+      "$P=1(8.3)(800)/0.0040=1.66\\times10^6\\,\\mathrm{Pa}=1.66\\,\\mathrm{MPa}$."
+    ],
+    "note": "Uses the exam's ideal-gas assumption that the water is all vapor."
   },
   {
     "id": "Q4-07",
@@ -1712,7 +1949,14 @@
     ],
     "answer": "1367 m/s — choice b.",
     "cleanAnswer": "Choice B : 1367 m/s",
-    "correctChoiceLetter": "b"
+    "correctChoiceLetter": "b",
+    "shortcut": "v_{\\rm rms}=\\sqrt{\\frac{3RT}{M}}",
+    "goal": "Rms speed of helium atoms.",
+    "steps": [
+      "$T=27+273=300\\,\\mathrm K$; helium molar mass $M=4.0\\,\\mathrm{g/mol}=0.0040\\,\\mathrm{kg/mol}$.",
+      "$v_{\rm rms}=\\sqrt{3(8.3)(300)/0.0040}\\approx1367\\,\\mathrm{m/s}$."
+    ],
+    "note": "Balloon diameter and pressure are unnecessary for rms speed."
   },
   {
     "id": "Q4-08",
@@ -1756,7 +2000,14 @@
     ],
     "answer": "Internal energy decreases by 50 J — choice b.",
     "cleanAnswer": "Choice B : พลังงานภายในลดลง 50 J",
-    "correctChoiceLetter": "b"
+    "correctChoiceLetter": "b",
+    "shortcut": "\\Delta U=Q-W_{\\rm by},\\quad W_{\\rm by}=P(V_f-V_i)",
+    "goal": "Internal energy change during compression while losing heat.",
+    "steps": [
+      "The gas loses heat: $Q=-80\\,\\mathrm J$. Compression work by gas: $25(1.8-3.0)=-30\\,\\mathrm J$.",
+      "$\\Delta U=-80-(-30)=-50\\,\\mathrm J$."
+    ],
+    "note": "Compression makes work done by the gas negative."
   },
   {
     "id": "Q4-09",
@@ -1800,7 +2051,14 @@
     ],
     "answer": "1.86 — choice d.",
     "cleanAnswer": "Choice D : 1.86",
-    "correctChoiceLetter": "d"
+    "correctChoiceLetter": "d",
+    "shortcut": "\\mathrm{COP}_{\\rm ref}=\\frac{Q_c}{W}=\\frac{1-\\eta}{\\eta}",
+    "goal": "Refrigerator COP from the efficiency of the reversed Carnot engine.",
+    "steps": [
+      "For engine efficiency $\\eta=0.35$, the rejected-heat fraction is $1-\\eta=0.65$.",
+      "$\\mathrm{COP}=0.65/0.35=1.857\\approx1.86$."
+    ],
+    "note": "This is refrigerator COP, not engine efficiency."
   },
   {
     "id": "Q4-10",
@@ -1844,7 +2102,14 @@
     ],
     "answer": "−568 J/K — choice a.",
     "cleanAnswer": "Choice A : -568 J/K",
-    "correctChoiceLetter": "a"
+    "correctChoiceLetter": "a",
+    "shortcut": "\\Delta S_{\\rm room}=\\frac{Q_{\\rm room}}{T_{\\rm room}}=-\\frac{mL_f}{T_{\\rm room}}",
+    "goal": "Entropy change of the room as 500 g ice melts.",
+    "steps": [
+      "The room supplies melting heat $Q_{\rm room}=-(0.500)(3.33\\times10^5)=-166{,}500\\,\\mathrm J$.",
+      "Room temperature $20^{\\circ}\\mathrm C=293.15\\,\\mathrm K$, so $\\Delta S_{\rm room}=-166{,}500/293.15\\approx-568\\,\\mathrm{J/K}$."
+    ],
+    "note": "The question asks about the room, not the ice; use room temperature and a negative sign."
   },
   {
     "id": "FM-01.a",
@@ -1865,7 +2130,14 @@
     "options": [],
     "answer": "20 cm.",
     "cleanAnswer": "20 cm.",
-    "correctChoiceLetter": null
+    "correctChoiceLetter": null,
+    "shortcut": "V_w=A_2L=\\frac{m_w}{\\rho_w},\\quad L=\\frac{m_w}{\\rho_w A_2}",
+    "goal": "Length of the water column in the narrow right arm.",
+    "steps": [
+      "Water mass $100\\,\\mathrm g$ gives volume $100\\,\\mathrm{cm^3}$ if $\\rho_w=1.00\\,\\mathrm{g/cm^3}$.",
+      "The right arm has area $5\\,\\mathrm{cm^2}$, so $L=100/5=20\\,\\mathrm{cm}$."
+    ],
+    "note": "Use the area of the water-filled right arm; water density is assumed, not printed."
   },
   {
     "id": "FM-01.b",
@@ -1886,7 +2158,14 @@
     "options": [],
     "answer": "0.49 cm, or 4.9 mm upward in the left arm.",
     "cleanAnswer": "0.49 cm, or 4.9 mm upward in the left arm.",
-    "correctChoiceLetter": null
+    "correctChoiceLetter": null,
+    "shortcut": "A_1h=A_2d,\\quad \\rho_{\\rm Hg}(h+d)=\\rho_w L,\\quad h=\\frac{m_w}{\\rho_{\\rm Hg}(A_1+A_2)}",
+    "goal": "Rise of the left mercury surface above its original level.",
+    "steps": [
+      "Conserved mercury volume gives $d=(A_1/A_2)h=2h$, so the mercury level difference is $h+d=3h$.",
+      "Balance the water and mercury pressure heads: $h=100/[13.6(10+5)]=0.490\\,\\mathrm{cm}$."
+    ],
+    "note": "The figure's h is the left surface rise, not the full mercury level difference."
   },
   {
     "id": "FM-02",
@@ -1901,7 +2180,14 @@
     "options": [],
     "answer": "0.258 N downward.",
     "cleanAnswer": "0.258 N downward.",
-    "correctChoiceLetter": null
+    "correctChoiceLetter": null,
+    "shortcut": "F_{\\rm press}=F_B-W_b=(\\rho_w-\\rho_b)gV,\\quad V=\\frac{\\pi D^3}{6}",
+    "goal": "Downward force that holds the ping-pong ball fully submerged.",
+    "steps": [
+      "For a fully submerged ball, the displaced-water and ball volumes are the same: $V=\\pi(0.0380)^3/6=2.873\\times10^{-5}\\,\\mathrm{m^3}$.",
+      "$F_{\\rm press}=(1000-84.0)(9.81)V=0.258\\,\\mathrm N$ downward."
+    ],
+    "note": "Subtract the ball's weight from buoyancy; $D$ is diameter, not radius."
   },
   {
     "id": "FM-03",
@@ -1922,7 +2208,14 @@
     "options": [],
     "answer": "4.43 m/s.",
     "cleanAnswer": "4.43 m/s.",
-    "correctChoiceLetter": null
+    "correctChoiceLetter": null,
+    "shortcut": "v=\\sqrt{2gh}",
+    "goal": "Ideal speed at the siphon outlet.",
+    "steps": [
+      "The open reservoir surface and outlet share atmospheric pressure; the net vertical drop is $h=1\\,\\mathrm m$.",
+      "$v=\\sqrt{2(9.81)(1)}=4.43\\,\\mathrm{m/s}$."
+    ],
+    "note": "Use the surface-to-outlet drop; the crest height does not set ideal outlet speed."
   },
   {
     "id": "FM-04",
@@ -1943,7 +2236,14 @@
     "options": [],
     "answer": "12.6 m/s.",
     "cleanAnswer": "12.6 m/s.",
-    "correctChoiceLetter": null
+    "correctChoiceLetter": null,
+    "shortcut": "v_n=\\sqrt{\\frac{2F}{\\rho A_b[1-(A_n/A_b)^2]}}\\approx\\sqrt{\\frac{2F}{\\rho A_b}}",
+    "goal": "Speed of liquid leaving the syringe needle.",
+    "steps": [
+      "Plunger pressure increase is $F/A_b=2/(2.5\\times10^{-5})=8.0\\times10^4\\,\\mathrm{Pa}$.",
+      "Continuity makes barrel speed tiny; Bernoulli gives $v_n\\approx\\sqrt{2(8.0\\times10^4)/1000}=12.6\\,\\mathrm{m/s}$."
+    ],
+    "note": "Divide plunger force by barrel area, not needle area; the exact ideal formula retains the tiny area-ratio term."
   },
   {
     "id": "FM-05",
@@ -1958,7 +2258,14 @@
     "options": [],
     "answer": "$A=m/[(\\rho_w-\\rho_s)h]$, for $\\rho_s<\\rho_w$.",
     "cleanAnswer": "$A=m/[(\\rho_w-\\rho_s)h]$, for $\\rho_s<\\rho_w$.",
-    "correctChoiceLetter": null
+    "correctChoiceLetter": null,
+    "shortcut": "\\rho_w Ahg=(m+\\rho_s Ah)g,\\quad A=\\frac{m}{(\\rho_w-\\rho_s)h}",
+    "goal": "Area of a just-awash Styrofoam slab supporting a swimmer.",
+    "steps": [
+      "Just awash means the slab's full volume $Ah$ displaces water; support must carry both swimmer and slab.",
+      "Cancel $g$ and solve $m=(\\rho_w-\\rho_s)Ah$ for the area."
+    ],
+    "note": "Include the slab's own mass; the swimmer stays above the waterline."
   },
   {
     "id": "OM-01.a",
@@ -1973,7 +2280,14 @@
     "options": [],
     "answer": "$v_{\\max}=0.40\\,\\mathrm{m/s}$ and $|a|_{\\max}=1.6\\,\\mathrm{m/s^2}$.",
     "cleanAnswer": "$v_{\\max}=0.40\\,\\mathrm{m/s}$ and $|a|_{\\max}=1.6\\,\\mathrm{m/s^2}$.",
-    "correctChoiceLetter": null
+    "correctChoiceLetter": null,
+    "shortcut": "\\omega=\\sqrt{k/m},\\quad v_{\\max}=\\omega A,\\quad |a|_{\\max}=\\omega^2A",
+    "goal": "Maximum speed and acceleration of the spring mass.",
+    "steps": [
+      "$\\omega=\\sqrt{8/0.5}=4\\,\\mathrm{rad/s}$ and $A=0.10\\,\\mathrm m$.",
+      "$v_{\\max}=4(0.10)=0.40\\,\\mathrm{m/s}$; $|a|_{\\max}=4^2(0.10)=1.6\\,\\mathrm{m/s^2}$."
+    ],
+    "note": "Speed peaks at equilibrium; acceleration magnitude peaks at an endpoint."
   },
   {
     "id": "OM-01.b",
@@ -1988,7 +2302,14 @@
     "options": [],
     "answer": "Speed 0.32 m/s; acceleration magnitude 0.96 m/s² toward equilibrium.",
     "cleanAnswer": "Speed 0.32 m/s; acceleration magnitude 0.96 m/s² toward equilibrium.",
-    "correctChoiceLetter": null
+    "correctChoiceLetter": null,
+    "shortcut": "|v|=\\omega\\sqrt{A^2-x^2},\\quad a=-\\omega^2x",
+    "goal": "Speed and acceleration 6 cm from equilibrium.",
+    "steps": [
+      "Use $\\omega=4\\,\\mathrm{rad/s}$, $A=0.10\\,\\mathrm m$, and $|x|=0.06\\,\\mathrm m$.",
+      "$|v|=4\\sqrt{0.10^2-0.06^2}=0.32\\,\\mathrm{m/s}$; $|a|=4^2(0.06)=0.96\\,\\mathrm{m/s^2}$."
+    ],
+    "note": "Position alone gives acceleration direction but not velocity direction."
   },
   {
     "id": "OM-01.c",
@@ -2003,7 +2324,14 @@
     "options": [],
     "answer": "0.232 s for the first positive-going arrival.",
     "cleanAnswer": "0.232 s for the first positive-going arrival.",
-    "correctChoiceLetter": null
+    "correctChoiceLetter": null,
+    "shortcut": "x=A\\sin(\\omega t),\\quad t=\\frac{1}{\\omega}\\arcsin(x/A)",
+    "goal": "Shortest time from equilibrium to x = 8 cm.",
+    "steps": [
+      "Starting at $x=0$ toward positive $x$, $x/A=8/10=0.8$ and $\\omega=4\\,\\mathrm{rad/s}$.",
+      "$t=\\arcsin(0.8)/4=0.232\\,\\mathrm s$ using radians."
+    ],
+    "note": "The source does not specify the initial direction; this is the shortest positive-going time."
   },
   {
     "id": "OM-02",
@@ -2018,7 +2346,16 @@
     "options": [],
     "answer": "$x=\\pm2.60\\,\\mathrm{cm}$ (or $\\pm\\frac{3\\sqrt{3}}{2}\\,\\mathrm{cm}$).",
     "cleanAnswer": "$x=\\pm2.60\\,\\mathrm{cm}$ (or $\\pm\\frac{3\\sqrt{3}}{2}\\,\\mathrm{cm}$).",
-    "correctChoiceLetter": null
+    "correctChoiceLetter": null,
+    "shortcut": "v=\\omega\\sqrt{A^2-x^2},\\quad v_{\\max}=\\omega A\\quad\\Rightarrow\\quad \\frac{v}{v_{\\max}}=\\sqrt{1-\\frac{x^2}{A^2}}",
+    "goal": "Find both symmetric positions where speed is half of maximum ($v=\\frac{1}{2}v_{\\max}$).",
+    "steps": [
+      "First relation: Write SHM speed-position equation $v=\\omega\\sqrt{A^2-x^2}$ alongside peak speed $v_{\\max}=\\omega A$ at $x=0$.",
+      "Why it applies: Dividing $v$ by $v_{\\max}$ eliminates $\\omega$, directly linking speed fraction to position fraction without time or frequency.",
+      "Solve ratio: Set $\\frac{v}{v_{\\max}}=\\frac{1}{2}$, square both sides $\\frac{1}{4}=1-\\frac{x^2}{A^2}$, giving $\\frac{x^2}{A^2}=\\frac{3}{4}\\implies x=\\pm\\frac{\\sqrt{3}}{2}A$.",
+      "Substitute $A=3\\,\\mathrm{cm}$: $x=\\pm\\frac{\\sqrt{3}}{2}(3)=\\pm2.60\\,\\mathrm{cm}$ (both positive and negative displacements from equilibrium)."
+    ],
+    "note": "First move is $v=\\omega\\sqrt{A^2-x^2}$. Both $\\pm$ signs are required because symmetric positions on either side of center have identical speed."
   },
   {
     "id": "OM-03",
@@ -2033,7 +2370,14 @@
     "options": [],
     "answer": "0.641 Hz and 1.31 Hz.",
     "cleanAnswer": "0.641 Hz and 1.31 Hz.",
-    "correctChoiceLetter": null
+    "correctChoiceLetter": null,
+    "shortcut": "A=\\frac{F_0}{|k-m\\omega_d^2|},\\quad f_{\\pm}=\\frac{1}{2\\pi}\\sqrt{\\frac{k\\pm F_0/A}{m}}",
+    "goal": "Both undamped driving frequencies giving the stated amplitude.",
+    "steps": [
+      "$F_0/A=1.70/0.440=3.864\\,\\mathrm{N/m}$, so $m\\omega_d^2=k\\pm3.864$ has two branches.",
+      "The branches give $f_-\\approx0.641\\,\\mathrm{Hz}$ and $f_+\\approx1.31\\,\\mathrm{Hz}$."
+    ],
+    "note": "Keep both signs from the absolute value; these are pure periodic-response frequencies for the ideal undamped model."
   },
   {
     "id": "OM-04",
@@ -2048,7 +2392,14 @@
     "options": [],
     "answer": "$I\\approx0.945\\,\\mathrm{kg\\,m^2}$ about the pivot.",
     "cleanAnswer": "$I\\approx0.945\\,\\mathrm{kg\\,m^2}$ about the pivot.",
-    "correctChoiceLetter": null
+    "correctChoiceLetter": null,
+    "shortcut": "\\omega=2\\pi f=\\sqrt{mgd/I},\\quad I=\\frac{mgd}{4\\pi^2f^2}",
+    "goal": "Moment of inertia about the physical pendulum pivot.",
+    "steps": [
+      "Use $m=2.2\\,\\mathrm{kg}$, $d=0.35\\,\\mathrm m$, $f=0.45\\,\\mathrm{Hz}$, and $g=9.81\\,\\mathrm{m/s^2}$.",
+      "$I=2.2(9.81)(0.35)/[4\\pi^2(0.45)^2]=0.945\\,\\mathrm{kg\\,m^2}$."
+    ],
+    "note": "Use pivot inertia and include $4\\pi^2$ when the given frequency is in hertz."
   },
   {
     "id": "OM-05.a",
@@ -2069,7 +2420,14 @@
     "options": [],
     "answer": "$F_y=-(2T/L)y$ for small displacement.",
     "cleanAnswer": "$F_y=-(2T/L)y$ for small displacement.",
-    "correctChoiceLetter": null
+    "correctChoiceLetter": null,
+    "shortcut": "F_y=-2T\\sin\\theta=-\\frac{2Ty}{\\sqrt{L^2+y^2}}\\approx-\\frac{2T}{L}y",
+    "goal": "Show the transverse restoring force from two bands.",
+    "steps": [
+      "Each band contributes a component $-T\\sin\\theta$ toward the original line; the horizontal components cancel.",
+      "For $|y|\\ll L$, $\\sin\\theta=y/\\sqrt{L^2+y^2}\\approx y/L$, giving $F_y\\approx-(2T/L)y$."
+    ],
+    "note": "Two bands give the factor 2; the linear form is a small-displacement approximation."
   },
   {
     "id": "OM-05.b",
@@ -2090,7 +2448,14 @@
     "options": [],
     "answer": "The motion is SHM for small y, with $\\omega=\\sqrt{2T/(mL)}$.",
     "cleanAnswer": "The motion is SHM for small y, with $\\omega=\\sqrt{2T/(mL)}$.",
-    "correctChoiceLetter": null
+    "correctChoiceLetter": null,
+    "shortcut": "m\\ddot y=-\\frac{2T}{L}y,\\quad k_{\\rm eff}=\\frac{2T}{L},\\quad\\omega=\\sqrt{\\frac{2T}{mL}}",
+    "goal": "Show SHM and find the angular frequency.",
+    "steps": [
+      "Part (a) gives the spring-like force $F_y=-k_{\\rm eff}y$ with $k_{\\rm eff}=2T/L$.",
+      "Use $\\omega=\\sqrt{k_{\\rm eff}/m}$ to get $\\omega=\\sqrt{2T/(mL)}$."
+    ],
+    "note": "Here $T$ means tension, not oscillation period."
   },
   {
     "id": "WS-01.a",
@@ -2105,7 +2470,14 @@
     "options": [],
     "answer": "$A=0.020\\,\\mathrm m=2.0\\,\\mathrm{cm}$.",
     "cleanAnswer": "$A=0.020\\,\\mathrm m=2.0\\,\\mathrm{cm}$.",
-    "correctChoiceLetter": null
+    "correctChoiceLetter": null,
+    "shortcut": "y=A\\sin(kx-\\omega t),\\quad A=|\\text{sine coefficient}|",
+    "goal": "Wave amplitude from the sine equation.",
+    "steps": [
+      "Compare $y=0.02\\sin(kx-\\omega t)$ with the standard wave form.",
+      "The coefficient is $0.02\\,\\mathrm m$."
+    ],
+    "note": "Amplitude is the maximum transverse displacement, not wavelength."
   },
   {
     "id": "WS-01.b",
@@ -2120,7 +2492,14 @@
     "options": [],
     "answer": "$\\lambda=2.98\\,\\mathrm m$.",
     "cleanAnswer": "$\\lambda=2.98\\,\\mathrm m$.",
-    "correctChoiceLetter": null
+    "correctChoiceLetter": null,
+    "shortcut": "k=\\frac{2\\pi}{\\lambda},\\quad\\lambda=\\frac{2\\pi}{k}",
+    "goal": "Wavelength from angular wavenumber k.",
+    "steps": [
+      "One spatial cycle changes the phase by $2\\pi$ radians.",
+      "$\\lambda=2\\pi/2.11=2.98\\,\\mathrm m$."
+    ],
+    "note": "Do not use $1/k$; k is angular wavenumber."
   },
   {
     "id": "WS-01.c",
@@ -2135,7 +2514,14 @@
     "options": [],
     "answer": "$f=0.576\\,\\mathrm{Hz}$.",
     "cleanAnswer": "$f=0.576\\,\\mathrm{Hz}$.",
-    "correctChoiceLetter": null
+    "correctChoiceLetter": null,
+    "shortcut": "\\omega=2\\pi f,\\quad f=\\frac{\\omega}{2\\pi}",
+    "goal": "Ordinary frequency from angular frequency omega.",
+    "steps": [
+      "The given $3.62\\,\\mathrm{rad/s}$ is angular frequency, not hertz.",
+      "$f=3.62/(2\\pi)=0.576\\,\\mathrm{Hz}$."
+    ],
+    "note": "Divide rad/s by $2\\pi$ to get cycles/s."
   },
   {
     "id": "WS-01.d",
@@ -2150,7 +2536,14 @@
     "options": [],
     "answer": "$v=1.72\\,\\mathrm{m/s}$ toward $+x$.",
     "cleanAnswer": "$v=1.72\\,\\mathrm{m/s}$ toward $+x$.",
-    "correctChoiceLetter": null
+    "correctChoiceLetter": null,
+    "shortcut": "v=\\frac{\\omega}{k}=\\lambda f",
+    "goal": "Wave propagation speed from omega and k.",
+    "steps": [
+      "The phase $kx-\\omega t$ moves toward positive $x$.",
+      "$v=3.62/2.11=1.72\\,\\mathrm{m/s}$ in the $+x$ direction."
+    ],
+    "note": "This is wave propagation speed, not the medium particle's transverse speed."
   },
   {
     "id": "WS-02",
@@ -2165,7 +2558,14 @@
     "options": [],
     "answer": "$t=\\sqrt{\\pi d^2/(4T)}(L_s\\sqrt{\\rho_s}+L_c\\sqrt{\\rho_c})$; about 0.329 s only with the stated illustrative densities.",
     "cleanAnswer": "$t=\\sqrt{\\pi d^2/(4T)}(L_s\\sqrt{\\rho_s}+L_c\\sqrt{\\rho_c})$; about 0.329 s only with the stated illustrative densities.",
-    "correctChoiceLetter": null
+    "correctChoiceLetter": null,
+    "shortcut": "S=\\frac{\\pi d^2}{4},\\quad v_i=\\sqrt{\\frac{T}{\\rho_iS}},\\quad t=\\frac{L_s}{v_s}+\\frac{L_c}{v_c}",
+    "goal": "Total travel time across steel and copper wire sections.",
+    "steps": [
+      "Find each wire's linear density $\\mu_i=\\rho_iS$ and speed $v_i=\\sqrt{T/\\mu_i}$; add the two travel times.",
+      "With illustrative $\\rho_s=7860$ and $\\rho_c=8920\\,\\mathrm{kg/m^3}$, $t\\approx0.1925+0.1367=0.329\\,\\mathrm s$."
+    ],
+    "note": "The source omits steel/copper densities, so the symbolic answer is exact; a number needs chosen table values."
   },
   {
     "id": "WS-03",
@@ -2180,7 +2580,14 @@
     "options": [],
     "answer": "$u=c/13$; about 26.4 m/s if sound speed is 343 m/s.",
     "cleanAnswer": "$u=c/13$; about 26.4 m/s if sound speed is 343 m/s.",
-    "correctChoiceLetter": null
+    "correctChoiceLetter": null,
+    "shortcut": "u=c\\frac{f_a-f_r}{f_a+f_r}",
+    "goal": "Ambulance speed from approach and recession frequencies.",
+    "steps": [
+      "For a moving source and stationary listener, divide the approach and recession Doppler relations to eliminate the siren frequency.",
+      "$u/c=(560-480)/(560+480)=1/13$, so $u=c/13\\approx26.4\\,\\mathrm{m/s}$ if $c=343\\,\\mathrm{m/s}$."
+    ],
+    "note": "The question does not specify sound speed c, so the exact answer retains c."
   },
   {
     "id": "WS-04",
@@ -2201,7 +2608,14 @@
     "options": [],
     "answer": "$\\Delta t=\\pi r^2c/(2fR)$.",
     "cleanAnswer": "$\\Delta t=\\pi r^2c/(2fR)$.",
-    "correctChoiceLetter": null
+    "correctChoiceLetter": null,
+    "shortcut": "\\Delta\\ell=\\frac{\\lambda}{2}=\\frac{c}{2f},\\quad v_w=\\frac{R}{\\pi r^2},\\quad\\Delta t=\\frac{\\pi r^2c}{2fR}",
+    "goal": "Time between adjacent air-column resonances while water rises.",
+    "steps": [
+      "Adjacent open-closed resonances differ in air-column length by $\\lambda/2=c/(2f)$.",
+      "Water rises at $R/(\\pi r^2)$, so $\\Delta t=(c/2f)/(R/\\pi r^2)=\\pi r^2c/(2fR)$."
+    ],
+    "note": "Use half a wavelength between successive resonances, not the first resonance length $\\lambda/4$."
   },
   {
     "id": "WS-05",
@@ -2222,6 +2636,13 @@
     "options": [],
     "answer": "$\\tau=\\sqrt{mL/(Mg\\sin\\theta)}$.",
     "cleanAnswer": "$\\tau=\\sqrt{mL/(Mg\\sin\\theta)}$.",
-    "correctChoiceLetter": null
+    "correctChoiceLetter": null,
+    "shortcut": "T=Mg\\sin\\theta,\\quad\\mu=\\frac{m}{L},\\quad\\tau=\\frac{L}{\\sqrt{T/\\mu}}=\\sqrt{\\frac{mL}{Mg\\sin\\theta}}",
+    "goal": "Wave travel time along the string on the incline.",
+    "steps": [
+      "For a frictionless incline, the block's downhill weight component sets string tension $T=Mg\\sin\\theta$.",
+      "With string mass per length $\\mu=m/L$, use $v=\\sqrt{T/\\mu}$ and $\\tau=L/v=\\sqrt{mL/(Mg\\sin\\theta)}$."
+    ],
+    "note": "The frictionless-incline assumption is implicit; tension is $Mg\\sin\\theta$, not $Mg\\cos\\theta$."
   }
 ]
