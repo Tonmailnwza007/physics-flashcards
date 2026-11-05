@@ -40,6 +40,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "L_max about 33.0 m; choice b, 33 เมตร.",
     "cleanAnswer": "Choice B : 33 เมตร",
     "correctChoiceLetter": "b",
@@ -115,6 +116,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "f=r sqrt(rho g/(4 pi m)) Hz; choice 1, option CB-02-a.",
     "cleanAnswer": "Choice A : $r\\sqrt{\\frac{\\rho g}{4\\pi m}}$",
     "correctChoiceLetter": "a",
@@ -184,6 +186,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "((rho_0-rho)/rho_0)*100%; choice 3, option CB-03-c.",
     "cleanAnswer": "Choice C : $\\left(\\frac{\\rho_0 - \\rho}{\\rho_0}\\right) \\times 100\\%$",
     "correctChoiceLetter": "c",
@@ -243,6 +246,7 @@
       }
     ],
     "isSynthetic": true,
+    "frontAssumption": null,
     "answer": "5 m from the cliff top under the stated piecewise wave-speed model; no matching printed choice.",
     "cleanAnswer": "Choice B : 5 m จากยอดหน้าผา",
     "correctChoiceLetter": "b",
@@ -318,6 +322,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "Under the exam's full-sphere-area model, R=sqrt(F/(4 pi P_a)); source choice 1 (CB-05-a).",
     "cleanAnswer": "Choice A : $R = \\sqrt{\\frac{F}{4\\pi P_a}}$",
     "correctChoiceLetter": "a",
@@ -371,6 +376,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "Approximately 9 cm higher; source choice 3 (CB-06-c).",
     "cleanAnswer": "Choice C : 9 cm",
     "correctChoiceLetter": "c",
@@ -424,6 +430,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "Approximately 67 cm; source choice 2 (CB-07-b).",
     "cleanAnswer": "Choice B : 67 cm",
     "correctChoiceLetter": "b",
@@ -477,6 +484,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "Under the exam's d≈lambda rule, 20 m; source choice 4 (CB-08-d).",
     "cleanAnswer": "Choice D : 20 m",
     "correctChoiceLetter": "d",
@@ -530,6 +538,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "Statements ก and ค; source choice 2 (CB-09-b).",
     "cleanAnswer": "Choice B : ข้อ ก. และ ค. กล่าวถูกต้อง",
     "correctChoiceLetter": "b",
@@ -590,6 +599,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "Approximately 0.8 Hz; source choice 2 (CB-10-b).",
     "cleanAnswer": "Choice B : 0.8 Hz",
     "correctChoiceLetter": "b",
@@ -643,6 +653,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "Statements ข and ค; source choice 2 (CB-11-b).",
     "cleanAnswer": "Choice B : ข และ ค",
     "correctChoiceLetter": "b",
@@ -698,6 +709,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "Statements ก and ค; source choice 2 (CB-12-b).",
     "cleanAnswer": "Choice B : ก และ ค",
     "correctChoiceLetter": "b",
@@ -760,6 +772,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "Equal bottom pressure; unequal total water weight. Source choice 1 (CB-13-a).",
     "cleanAnswer": "Choice A : ความดันที่ก้นภาชนะทั้งสามใบมีค่าเท่ากัน แต่น้ำหนักของน้ำในภาชนะแต่ละใบมีค่าไม่เท่ากัน",
     "correctChoiceLetter": "a",
@@ -829,6 +842,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "v(t)=v_0+[F_0/(m omega)] sin(omega t); source choice 4 (CB-14-d).",
     "cleanAnswer": "Choice D : $v = \\frac{F_0}{m\\omega} \\sin(\\omega t) + v_0$",
     "correctChoiceLetter": "d",
@@ -898,6 +912,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "a=-omega^2 A cos(omega t+phi)=-omega^2 x; source choice 3 (CB-15-c).",
     "cleanAnswer": "Choice C : $-\\omega^2 A\\cos(\\omega t+\\phi)$",
     "correctChoiceLetter": "c",
@@ -951,6 +966,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "Choice c: ice at -20 C and burning torch at 233 C.",
     "cleanAnswer": "Choice C : ก้อนน้ำแข็งที่อุณหภูมิ -20°C กับคบเพลิงที่กำลังลุกไหม้ที่อุณหภูมิ 233°C",
     "correctChoiceLetter": "c",
@@ -1005,6 +1021,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "99.4 cm^3; choice a (TH-02-a).",
     "cleanAnswer": "Choice A : 99.4 cm³",
     "correctChoiceLetter": "a",
@@ -1059,6 +1076,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "29.6°C — choice b.",
     "cleanAnswer": "Choice B : 29.6°C",
     "correctChoiceLetter": "b",
@@ -1111,6 +1129,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "12.9 g — choice d.",
     "cleanAnswer": "Choice D : 12.9 g",
     "correctChoiceLetter": "d",
@@ -1163,6 +1182,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "667 W — choice a, if k = 0.80 W/(m·K).",
     "cleanAnswer": "Choice A : 667 W",
     "correctChoiceLetter": "a",
@@ -1215,6 +1235,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "2.0 cm³ — choice a.",
     "cleanAnswer": "Choice A : 2.0 cm³",
     "correctChoiceLetter": "a",
@@ -1267,6 +1288,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "Helium, 0.002 mol, 300 K, 300 cm³ — choice c.",
     "cleanAnswer": "Choice C : ก๊าซฮีเลียม 0.002 โมล ที่อุณหภูมิ 300 K ปริมาตร 300 cm³",
     "correctChoiceLetter": "c",
@@ -1319,6 +1341,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "√3 times the original speed — choice c.",
     "cleanAnswer": "Choice C : มีค่าเป็น √3 เท่าของอัตราเร็วเดิม",
     "correctChoiceLetter": "c",
@@ -1372,6 +1395,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "3.32 mol — choice a.",
     "cleanAnswer": "Choice A : 3.32 mol",
     "correctChoiceLetter": "a",
@@ -1424,6 +1448,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "7.97 × 10⁻²¹ J — choice d.",
     "cleanAnswer": "Choice D : $7.97 \\times 10^{-21}\\text{ J}$",
     "correctChoiceLetter": "d",
@@ -1476,6 +1501,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "−466 J — choice d (course sign convention).",
     "cleanAnswer": "Choice D : -466 J",
     "correctChoiceLetter": "d",
@@ -1534,6 +1560,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "−12 × 10⁶ J — choice c.",
     "cleanAnswer": "Choice C : $-12 \\times 10^6\\text{ J}$",
     "correctChoiceLetter": "c",
@@ -1586,6 +1613,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "+7.5 kJ — choice a.",
     "cleanAnswer": "Choice A : 7.5 kJ",
     "correctChoiceLetter": "a",
@@ -1638,6 +1666,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "10.7 kJ — choice b.",
     "cleanAnswer": "Choice B : 10.7 kJ",
     "correctChoiceLetter": "b",
@@ -1691,6 +1720,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "−610 J/K — choice c.",
     "cleanAnswer": "Choice C : -610 J/K",
     "correctChoiceLetter": "c",
@@ -1743,6 +1773,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "−274 °F — choice d.",
     "cleanAnswer": "Choice D : -274 °F",
     "correctChoiceLetter": "d",
@@ -1795,6 +1826,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "About 78 cm³ — choice b.",
     "cleanAnswer": "Choice B : 78 cm³",
     "correctChoiceLetter": "b",
@@ -1847,6 +1879,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "Heating steam from 100°C to 140°C — choice c.",
     "cleanAnswer": "Choice C : อุณหภูมิของไอน้ำเพิ่มจาก 100°C เป็น 140°C",
     "correctChoiceLetter": "c",
@@ -1899,6 +1932,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "29.6°C — choice a.",
     "cleanAnswer": "Choice A : 29.6°C",
     "correctChoiceLetter": "a",
@@ -1951,6 +1985,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "3.9 atm — choice a.",
     "cleanAnswer": "Choice A : 3.9 atm",
     "correctChoiceLetter": "a",
@@ -2003,6 +2038,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "1.7 MPa — choice a.",
     "cleanAnswer": "Choice A : 1.7 MPa",
     "correctChoiceLetter": "a",
@@ -2055,6 +2091,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "1367 m/s — choice b.",
     "cleanAnswer": "Choice B : 1367 m/s",
     "correctChoiceLetter": "b",
@@ -2107,6 +2144,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "Internal energy decreases by 50 J — choice b.",
     "cleanAnswer": "Choice B : พลังงานภายในลดลง 50 J",
     "correctChoiceLetter": "b",
@@ -2159,6 +2197,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "1.86 — choice d.",
     "cleanAnswer": "Choice D : 1.86",
     "correctChoiceLetter": "d",
@@ -2211,6 +2250,7 @@
       }
     ],
     "isSynthetic": false,
+    "frontAssumption": null,
     "answer": "−568 J/K — choice a.",
     "cleanAnswer": "Choice A : -568 J/K",
     "correctChoiceLetter": "a",
@@ -2269,6 +2309,7 @@
       }
     ],
     "isSynthetic": true,
+    "frontAssumption": "สมมุติความหนาแน่นน้ำมาตรฐาน $\\rho_w = 1.00\\text{ g/cm}^3$",
     "answer": "20 cm.",
     "cleanAnswer": "Choice C : 20 cm",
     "correctChoiceLetter": "c",
@@ -2327,6 +2368,7 @@
       }
     ],
     "isSynthetic": true,
+    "frontAssumption": null,
     "answer": "0.49 cm, or 4.9 mm upward in the left arm.",
     "cleanAnswer": "Choice A : 0.49 cm (4.9 mm)",
     "correctChoiceLetter": "a",
@@ -2379,6 +2421,7 @@
       }
     ],
     "isSynthetic": true,
+    "frontAssumption": null,
     "answer": "0.258 N downward.",
     "cleanAnswer": "Choice D : 0.258 N ชี้ลง",
     "correctChoiceLetter": "d",
@@ -2437,6 +2480,7 @@
       }
     ],
     "isSynthetic": true,
+    "frontAssumption": null,
     "answer": "4.43 m/s.",
     "cleanAnswer": "Choice B : 4.43 m/s",
     "correctChoiceLetter": "b",
@@ -2495,6 +2539,7 @@
       }
     ],
     "isSynthetic": true,
+    "frontAssumption": null,
     "answer": "12.6 m/s.",
     "cleanAnswer": "Choice A : 12.6 m/s",
     "correctChoiceLetter": "a",
@@ -2547,6 +2592,7 @@
       }
     ],
     "isSynthetic": true,
+    "frontAssumption": null,
     "answer": "$A=m/[(\\rho_w-\\rho_s)h]$, for $\\rho_s<\\rho_w$.",
     "cleanAnswer": "Choice C : $A = \\frac{m}{(\\rho_w - \\rho_s)h}$",
     "correctChoiceLetter": "c",
@@ -2599,6 +2645,7 @@
       }
     ],
     "isSynthetic": true,
+    "frontAssumption": null,
     "answer": "$v_{\\max}=0.40\\,\\mathrm{m/s}$ and $|a|_{\\max}=1.6\\,\\mathrm{m/s^2}$.",
     "cleanAnswer": "Choice B : $v_{\\max} = 0.40\\text{ m/s},\\ |a|_{\\max} = 1.6\\text{ m/s}^2$",
     "correctChoiceLetter": "b",
@@ -2651,6 +2698,7 @@
       }
     ],
     "isSynthetic": true,
+    "frontAssumption": null,
     "answer": "Speed 0.32 m/s; acceleration magnitude 0.96 m/s² toward equilibrium.",
     "cleanAnswer": "Choice D : $|v| = 0.32\\text{ m/s},\\ |a| = 0.96\\text{ m/s}^2$",
     "correctChoiceLetter": "d",
@@ -2703,6 +2751,7 @@
       }
     ],
     "isSynthetic": true,
+    "frontAssumption": null,
     "answer": "0.232 s for the first positive-going arrival.",
     "cleanAnswer": "Choice A : 0.232 s",
     "correctChoiceLetter": "a",
@@ -2755,6 +2804,7 @@
       }
     ],
     "isSynthetic": true,
+    "frontAssumption": null,
     "answer": "$x=\\pm2.60\\,\\mathrm{cm}$ (or $\\pm\\frac{3\\sqrt{3}}{2}\\,\\mathrm{cm}$).",
     "cleanAnswer": "Choice C : $x = \\pm 2.60\\text{ cm}\\ (\\pm\\frac{\\sqrt{3}}{2}A)$",
     "correctChoiceLetter": "c",
@@ -2809,6 +2859,7 @@
       }
     ],
     "isSynthetic": true,
+    "frontAssumption": null,
     "answer": "0.641 Hz and 1.31 Hz.",
     "cleanAnswer": "Choice B : 0.641 Hz และ 1.31 Hz",
     "correctChoiceLetter": "b",
@@ -2861,6 +2912,7 @@
       }
     ],
     "isSynthetic": true,
+    "frontAssumption": null,
     "answer": "$I\\approx0.945\\,\\mathrm{kg\\,m^2}$ about the pivot.",
     "cleanAnswer": "Choice A : $0.945\\text{ kg}\\cdot\\text{m}^2$",
     "correctChoiceLetter": "a",
@@ -2919,6 +2971,7 @@
       }
     ],
     "isSynthetic": true,
+    "frontAssumption": null,
     "answer": "$F_y=-(2T/L)y$ for small displacement.",
     "cleanAnswer": "Choice D : $F_y = -\\frac{2T}{L}y$",
     "correctChoiceLetter": "d",
@@ -2977,6 +3030,7 @@
       }
     ],
     "isSynthetic": true,
+    "frontAssumption": null,
     "answer": "The motion is SHM for small y, with $\\omega=\\sqrt{2T/(mL)}$.",
     "cleanAnswer": "Choice B : $\\omega = \\sqrt{\\frac{2T}{mL}}$",
     "correctChoiceLetter": "b",
@@ -3029,6 +3083,7 @@
       }
     ],
     "isSynthetic": true,
+    "frontAssumption": null,
     "answer": "$A=0.020\\,\\mathrm m=2.0\\,\\mathrm{cm}$.",
     "cleanAnswer": "Choice A : $2.0\\text{ cm}\\ (0.020\\text{ m})$",
     "correctChoiceLetter": "a",
@@ -3081,6 +3136,7 @@
       }
     ],
     "isSynthetic": true,
+    "frontAssumption": null,
     "answer": "$\\lambda=2.98\\,\\mathrm m$.",
     "cleanAnswer": "Choice C : 2.98 m",
     "correctChoiceLetter": "c",
@@ -3133,6 +3189,7 @@
       }
     ],
     "isSynthetic": true,
+    "frontAssumption": null,
     "answer": "$f=0.576\\,\\mathrm{Hz}$.",
     "cleanAnswer": "Choice D : 0.576 Hz",
     "correctChoiceLetter": "d",
@@ -3185,6 +3242,7 @@
       }
     ],
     "isSynthetic": true,
+    "frontAssumption": null,
     "answer": "$v=1.72\\,\\mathrm{m/s}$ toward $+x$.",
     "cleanAnswer": "Choice B : $1.72\\text{ m/s}$ ไปทาง $+x$",
     "correctChoiceLetter": "b",
@@ -3237,6 +3295,7 @@
       }
     ],
     "isSynthetic": true,
+    "frontAssumption": "สมมุติตารางความหนาแน่น: $\\rho_s = 7860\\text{ kg/m}^3$ (เหล็ก), $\\rho_c = 8920\\text{ kg/m}^3$ (ทองแดง)",
     "answer": "$t=\\sqrt{\\pi d^2/(4T)}(L_s\\sqrt{\\rho_s}+L_c\\sqrt{\\rho_c})$; about 0.329 s only with the stated illustrative densities.",
     "cleanAnswer": "Choice A : $t = \\sqrt{\\frac{\\pi d^2}{4T}}(L_s\\sqrt{\\rho_s}+L_c\\sqrt{\\rho_c}) \\approx 0.329\\text{ s}$",
     "correctChoiceLetter": "a",
@@ -3289,6 +3348,7 @@
       }
     ],
     "isSynthetic": true,
+    "frontAssumption": "สมมุติอัตราเร็วเสียงในอากาศ $c = 343\\text{ m/s}$",
     "answer": "$u=c/13$; about 26.4 m/s if sound speed is 343 m/s.",
     "cleanAnswer": "Choice C : $u = \\frac{c}{13} \\approx 26.4\\text{ m/s}$",
     "correctChoiceLetter": "c",
@@ -3347,6 +3407,7 @@
       }
     ],
     "isSynthetic": true,
+    "frontAssumption": null,
     "answer": "$\\Delta t=\\pi r^2c/(2fR)$.",
     "cleanAnswer": "Choice D : $\\Delta t = \\frac{\\pi r^2 c}{2 f R}$",
     "correctChoiceLetter": "d",
@@ -3405,6 +3466,7 @@
       }
     ],
     "isSynthetic": true,
+    "frontAssumption": null,
     "answer": "$\\tau=\\sqrt{mL/(Mg\\sin\\theta)}$.",
     "cleanAnswer": "Choice B : $\\tau = \\sqrt{\\frac{m L}{M g \\sin\\theta}}$",
     "correctChoiceLetter": "b",
