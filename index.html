@@ -1461,8 +1461,6 @@
               if (state.isRapidFire) {
                 toggleReveal();
               }
-            } else {
-              nextCard();
             }
           });
 
@@ -1640,12 +1638,9 @@
           e.target.closest('#solutionToggleBtn') ||
           e.target.closest('#solutionBox')) return;
 
-      if (state.isRapidFire) {
+      // Only reveal if unrevealed; never advance to nextCard on background card tap
+      if (!state.isRevealed) {
         toggleReveal();
-      } else {
-        if (!state.isRevealed) {
-          toggleReveal();
-        }
       }
     });
 
@@ -1664,25 +1659,10 @@
       toggleStarCurrent();
     });
 
-    // Touch Swipe
-    let touchStartX = 0;
-    let touchStartY = 0;
-    cardElement.addEventListener('touchstart', (e) => {
-      touchStartX = e.changedTouches[0].screenX;
-      touchStartY = e.changedTouches[0].screenY;
-    }, { passive: true });
-
-    cardElement.addEventListener('touchend', (e) => {
-      const dx = e.changedTouches[0].screenX - touchStartX;
-      const dy = e.changedTouches[0].screenY - touchStartY;
-      if (Math.abs(dx) > 48 && Math.abs(dx) > Math.abs(dy) * 1.5) {
-        if (dx < 0) {
-          nextCard();
-        } else {
-          prevCard();
-        }
-      }
-    }, { passive: true });
+    // Touch Navigation:
+    // Accidental swipe gestures on mobile cards have been removed to prevent unwanted
+    // card flipping during vertical scrolling, formula panning, or diagram viewing.
+    // Navigation is controlled by the bottom action buttons (◀, Next Card ▶, ▶).
 
     shuffleBtn.addEventListener('click', () => {
       state.isShuffle = !state.isShuffle;
