@@ -45,7 +45,9 @@
     "shortcut": "H=L+x,\\qquad mgH=(1/2)kx^2,\\qquad L_{max}=H-(2mgH/k)^{1/2}",
     "goal": "A jumper falls from height H on a Hooke-law rope of unknown free length L, spring constant k, and mass m; asks for the longest safe free rope length with zero speed at the ground.",
     "steps": [
-      "The full fall is H=L+x. At the lowest safe point, kinetic energy is zero, so mgH=(1/2)kx^2. Thus x=sqrt(2mgH/k)=sqrt(2(60 kg)(9.8 m/s^2)(36 m)/(4800 N/m))=sqrt(8.82 m^2)=2.9698 m. The greatest free rope length is L=36-2.9698=33.0302 m. The matching printed option is 33 m."
+      "Total vertical drop is $H = L + x$, where $L$ is free rope length and $x$ is rope stretch.",
+      "At lowest safe point, velocity is zero: $mgH = \\frac{1}{2}kx^2 \\implies x = \\sqrt{\\frac{2mgH}{k}} = \\sqrt{\\frac{2(60)(9.8)(36)}{4800}} \\approx 2.97\\text{ m}$.",
+      "Maximum free rope length: $L = H - x = 36 - 2.97 \\approx 33.03\\text{ m} \\rightarrow 33\\text{ m}$ (Choice B)."
     ],
     "note": "The energy uses the full gravitational drop H while the spring stretches only x=H-L. Do not put L in the spring energy term."
   },
@@ -117,7 +119,9 @@
     "shortcut": "A=\\pi r^2,\\qquad k_{\\mathrm{eff}}=\\rho g A,\\qquad f=\\frac{1}{2\\pi}\\sqrt{\\frac{k_{\\mathrm{eff}}}{m}}=r\\sqrt{\\frac{\\rho g}{4\\pi m}}",
     "goal": "A spherical ball of mass m floats half above a liquid of density rho; a tiny downward push makes it bob; asked for cycles per second.",
     "steps": [
-      "A small downward displacement y increases submerged volume by Delta V≈Ay=pi r^2 y. Extra upward buoyancy gives restoring force F=-rho g Delta V=-(rho g pi r^2)y, so k_eff=rho g pi r^2. Then f=(1/(2pi))sqrt(k_eff/m)=(1/(2pi))sqrt(rho g pi r^2/m)=r sqrt(rho g/(4pi m)). This matches the first graphical option. Its dimensions are s^-1 because r sqrt(rho g/m) is m times 1/(m s)."
+      "Submerging by depth $y$ adds displaced volume: $\\Delta V = Ay = \\pi r^2 y$.",
+      "Upward net restoring force: $F = -\\rho g \\Delta V = -(\\rho g \\pi r^2)y \\implies k_{\\text{eff}} = \\rho g \\pi r^2$.",
+      "Oscillation frequency: $f = \\frac{1}{2\\pi}\\sqrt{\\frac{k_{\\text{eff}}}{m}} = \\frac{1}{2\\pi}\\sqrt{\\frac{\\rho g \\pi r^2}{m}} = r\\sqrt{\\frac{\\rho g}{4\\pi m}}$ (Choice A)."
     ],
     "note": "The asked 'times per second' is frequency, not period. The correct source option has radius r outside the square root and 4 pi m inside; omitting r destroys the units."
   },
@@ -183,7 +187,9 @@
     "shortcut": "\\rho_0 gV_{\\mathrm{sub}}=\\rho gV,\\qquad \\%V_{\\mathrm{above}}=\\frac{\\rho_0-\\rho}{\\rho_0}\\times100\\%",
     "goal": "Ice density rho floats in water density rho_0; asked for percent of the ice volume above the surface.",
     "steps": [
-      "Floating balance gives rho_0 g V_sub = rho g V. Cancel g and divide by rho_0 V: V_sub/V = rho/rho_0. Above-water fraction is (V-V_sub)/V = 1-rho/rho_0 = (rho_0-rho)/rho_0. Multiply by 100% to obtain the answer, matching original PDF choice 3."
+      "Floating equilibrium: $\\rho_0 g V_{\\text{sub}} = \\rho g V \\implies \\frac{V_{\\text{sub}}}{V} = \\frac{\\rho}{\\rho_0}$.",
+      "Fraction above water: $\\frac{V_{\\text{above}}}{V} = 1 - \\frac{V_{\\text{sub}}}{V} = \\frac{\\rho_0 - \\rho}{\\rho_0}$.",
+      "Percentage above water: $%V_{\\text{above}} = \\frac{\\rho_0 - \\rho}{\\rho_0} \\times 100\\%$ (Choice C)."
     ],
     "note": "The density ratio rho/rho_0 gives the submerged fraction. The question asks for the portion above, so subtract that fraction from one. The PDF's correct image option is number 3; earlier text transcription had mislabeled the formulas."
   },
@@ -210,7 +216,9 @@
     "shortcut": "v=\\sqrt{T/\\mu},\\qquad v_1=2v_2,\\qquad \\frac{x}{v_2}=\\frac{4}{v_1}+\\frac{8-x}{v_2}",
     "goal": "Upper rope: 8 m and 800 g/m; lower rope: 4 m and 200 g/m; both endpoints send pulses simultaneously; find meeting point from top.",
     "steps": [
-      "Let v_2=v and v_1=2v. Lower pulse takes 4/(2v)=2/v to reach knot. In that time upper pulse moves 2 m, leaving a 6 m gap in the upper rope. Both then move toward each other at v, so each travels 3 m more; meeting point is 2+3=5 m from the top. Equivalently x/v=4/(2v)+(8-x)/v gives x=5 m. Original PDF page 4 offers 2 m, 4 m, 6 m, or the knot; none is 5 m. The PDF displays choice 2 selected, but this is a recorded response, not proof of a correct key."
+      "Wave speeds from tension $T$: $v_1 = \\sqrt{T/\\mu_1} = 2v$ (lower rope), $v_2 = \\sqrt{T/\\mu_2} = v$ (upper rope).",
+      "Lower pulse travels $4\\text{ m}$ to knot in time $t_1 = \\frac{4}{2v} = \\frac{2}{v}$. Meanwhile, top pulse moves $2\\text{ m}$ downward, leaving a $6\\text{ m}$ gap.",
+      "Both pulses now travel at speed $v$ toward each other across $6\\text{ m}$, meeting after $3\\text{ m}$ each. Meeting point is $2 + 3 = 5\\text{ m}$ from the top (no printed choice matches)."
     ],
     "note": "Do not apply v_1/v_2=2 over the full 12 m. The lower pulse crosses the knot before the two meet. The physically derived 5 m is not among the original four choices."
   },
@@ -282,7 +290,9 @@
     "shortcut": "P=F/A,\\qquad A=4\\pi R^2,\\qquad R=\\sqrt{F/(4\\pi P_a)}",
     "goal": "Find maximum balloon radius R from allowed force F and atmospheric pressure P_a; printed exam convention uses the full spherical surface area.",
     "steps": [
-      "Pressure relation P=F/A gives F=P_a A under the printed exam's area convention. Insert sphere area A=4 pi R^2: F=4 pi P_a R^2. Divide by 4 pi P_a and take square root: R=sqrt(F/(4 pi P_a)). This matches original image choice 1. It is conditional on the stated exam shortcut; the problem lacks enough real balloon mechanics to derive bursting uniquely."
+      "Exam pressure-force convention: $P = \\frac{F}{A} \\implies F = P_a A$.",
+      "Using full sphere area $A = 4\\pi R^2$: $F = 4\\pi P_a R^2$.",
+      "Solve for radius: $R = \\sqrt{\\frac{F}{4\\pi P_a}}$ (Choice A)."
     ],
     "note": "The radius must have units of metres, so F/P_a must be under the square root. Choice 1 has 4 pi from sphere surface area; choice 2 has pi from a projected disc and uses a different model."
   },
@@ -332,7 +342,9 @@
     "shortcut": "mg=\\rho_w g A\\Delta h,\\qquad A=L^2,\\qquad \\Delta h=\\frac{m}{\\rho_w L^2}",
     "goal": "A man leaves a floating cubical ice block; find how much higher it rises.",
     "steps": [
-      "Removed man's weight mg equals the decrease in buoyancy rho_w g A Delta h. Cancel g and use A=(0.80 m)^2=0.64 m^2. Delta h=60/(1000*0.64) m=0.09375 m=9.375 cm, approximately 9 cm, printed choice 3."
+      "Removed man's weight equals reduction in buoyant force: $mg = \\rho_w g A \\Delta h$.",
+      "Raft surface area: $A = (0.80\\text{ m})^2 = 0.64\\text{ m}^2$.",
+      "Height rise: $\\Delta h = \\frac{m}{\\rho_w A} = \\frac{60}{(1000)(0.64)} = 0.09375\\text{ m} \\approx 9.4\\text{ cm} \\rightarrow 9\\text{ cm}$ (Choice C)."
     ],
     "note": "Use the change in load only; no ice density or ice mass is required. Convert 80 cm to 0.80 m before squaring."
   },
@@ -382,7 +394,9 @@
     "shortcut": "v\\approx331+0.6T_C,\\qquad f_1=\\frac{v}{2L},\\qquad L=\\frac{v}{2f_1}",
     "goal": "Uniform Thai bamboo flute, all finger holes closed, lowest frequency 259.5 Hz at 25 C; find tube length.",
     "steps": [
-      "Sound speed v=331+0.6(25)=346 m/s. Open-open fundamental has f_1=v/(2L), so L=346/[2(259.5)] m=346/519 m=0.6667 m=66.67 cm, approximately 67 cm, printed choice 2."
+      "Speed of sound at $25^\\circ\\text{C}$: $v = 331 + 0.6(25) = 346\\text{ m/s}$.",
+      "Fundamental resonance of open tube: $f_1 = \\frac{v}{2L}$.",
+      "Tube length: $L = \\frac{v}{2f_1} = \\frac{346}{2(259.5)} \\approx 0.667\\text{ m} = 66.7\\text{ cm} \\rightarrow 67\\text{ cm}$ (Choice B)."
     ],
     "note": "Do not use L=v/(4f), which is for a tube closed at one end. Convert final metres to centimetres."
   },
@@ -432,7 +446,9 @@
     "shortcut": "v\\approx331+0.6T_C,\\qquad v=f\\lambda,\\qquad d\\approx\\lambda=\\frac{v}{f}",
     "goal": "Two speakers at 25 C emit 17.3 Hz sound; exam asks separation for good diffraction.",
     "steps": [
-      "At 25 C, v≈331+0.6(25)=346 m/s. The wave relation v=f lambda gives lambda=346/17.3=20 m. Under the intended d≈lambda exam rule, d≈20 m, choice 4."
+      "Speed of sound at $25^\\circ\\text{C}$: $v = 331 + 0.6(25) = 346\\text{ m/s}$.",
+      "Wavelength: $\\lambda = \\frac{v}{f} = \\frac{346}{17.3} = 20\\text{ m}$.",
+      "Using the exam rule for aperture matching wavelength: $d \\approx \\lambda = 20\\text{ m}$ (Choice D)."
     ],
     "note": "Do not confuse frequency with wavelength; divide 346 m/s by 17.3 Hz. The physical design phrase is vague, so use the source's intended wavelength match for this MCQ."
   },
@@ -482,7 +498,10 @@
     "shortcut": "a=-\\omega^2x,\\qquad K=\\tfrac12mv^2,\\qquad U=\\tfrac12kx^2",
     "goal": "Three statements: displacement-acceleration relation, kinetic energy at equilibrium, potential energy at maximum displacement. Choose the true statements.",
     "steps": [
-      "ก true by a=-omega^2 x (constant proportionality). ข false because equilibrium has maximum speed and K. ค true because at |x|=A, v=0 and U is maximal. Thus ก and ค, printed choice 2."
+      "Statement ก: $a = -\\omega^2 x$ (acceleration is directly proportional to displacement) $\\rightarrow$ True.",
+      "Statement ข: At equilibrium ($x = 0$), speed and kinetic energy $K$ are maximum, not zero $\\rightarrow$ False.",
+      "Statement ค: At turning points ($|x| = A$), $v = 0$ and potential energy $U = \\frac{1}{2}kA^2$ is maximal $\\rightarrow$ True.",
+      "Correct statements: ก and ค (Choice B)."
     ],
     "note": "At the centre speed and kinetic energy are maximum, not minimum. At the turning points speed is zero and potential energy is maximum."
   },
@@ -538,7 +557,9 @@
     "shortcut": "mg(h+x)=\\tfrac12kx^2,\\qquad \\frac{k}{m}=\\frac{2g(h+x)}{x^2},\\qquad f=\\frac{1}{2\\pi}\\sqrt{\\frac{k}{m}}",
     "goal": "A mass drops h=3 m before touching a spring, then compresses it x=2 m; find SHM cycles per second without given m or k.",
     "steps": [
-      "Energy from release to maximum compression gives mg(3+2)=(1/2)k(2)^2, so k/m=2g(5)/4=24.5 s^-2 using g=9.8 m/s^2. f=(1/(2pi))sqrt(k/m)=sqrt(24.5)/(2pi)=0.7878 Hz, approximately 0.8 Hz, printed choice 2."
+      "Total drop is $h + x = 3 + 2 = 5\\text{ m}$; spring compression is $x = 2\\text{ m}$.",
+      "Energy balance: $mg(h + x) = \\frac{1}{2}kx^2 \\implies \\frac{k}{m} = \\frac{2g(h + x)}{x^2} = \\frac{2(9.8)(5)}{4} = 24.5\\text{ s}^{-2}$.",
+      "Frequency: $f = \\frac{1}{2\\pi}\\sqrt{\\frac{k}{m}} = \\frac{\\sqrt{24.5}}{2\\pi} \\approx 0.788\\text{ Hz} \\rightarrow 0.8\\text{ Hz}$ (Choice B)."
     ],
     "note": "The total gravitational drop is h+x=5 m, not h=3 m. The question asks frequency f, not angular frequency omega."
   },
@@ -588,7 +609,11 @@
     "shortcut": "P_{\\mathrm{gauge}}=\\rho gh,\\qquad P_{\\mathrm{abs}}=P_{\\mathrm{atm}}+\\rho gh",
     "goal": "Evaluate four liquid-pressure statements: direction of pressure, dependence on liquid, gauge pressure versus depth, and dependence on free-surface area.",
     "steps": [
-      "ก false because pressure is scalar; pressure force is normal to the contact surface. ข true because rho depends on liquid type and pressure varies with rho. ค true from P_gauge=rho g h. ง false because exposed surface area does not appear in hydrostatic pressure. Thus ข and ค, source choice 2."
+      "Statement ก: Pressure is scalar (has no direction); only pressure force has direction $\\rightarrow$ False.",
+      "Statement ข: Hydrostatic pressure $P = \\rho g h$ depends on liquid density $\\rho \\rightarrow$ True.",
+      "Statement ค: Gauge pressure is $P_{\\text{gauge}} = \\rho g h \\rightarrow$ True.",
+      "Statement ง: Hydrostatic pressure is independent of container surface area $\\rightarrow$ False.",
+      "Correct statements: ข and ค (Choice B)."
     ],
     "note": "Statement ก says pressure has a direction, which is false. Do not confuse ความดัน (pressure) with แรงดัน (force from pressure)."
   },
@@ -638,7 +663,12 @@
     "shortcut": "P_{\\mathrm{abs}}=P_{\\mathrm{atm}}+\\rho gh,\\qquad P_{\\mathrm{gauge}}=\\rho gh",
     "goal": "Five liquid-pressure statements ask what depends on depth, direction, liquid type, volume, and atmosphere for gauge pressure.",
     "steps": [
-      "ก true by depth h. ข false because pressure is scalar and only pressure force is normal to a wall. ค true by liquid density rho. ง false because hydrostatic pressure does not depend on total liquid volume or vessel shape. จ false because gauge pressure rho g h excludes atmosphere. Thus ก and ค, original choice 2."
+      "Statement ก: Pressure increases linearly with depth $h$ ($P = P_0 + \\rho gh$) $\\rightarrow$ True.",
+      "Statement ข: Pressure is scalar; it does not act as a vector $\\rightarrow$ False.",
+      "Statement ค: Pressure depends directly on liquid density $\\rho \\rightarrow$ True.",
+      "Statement ง: Hydrostatic pressure is independent of container volume or cross-section shape $\\rightarrow$ False.",
+      "Statement จ: Gauge pressure excludes atmospheric pressure $\\rightarrow$ False.",
+      "Correct statements: ก and ค (Choice B)."
     ],
     "note": "Statement ข falsely assigns a direction to pressure. Statement จ falsely makes gauge pressure depend on P_atm; P_atm has already been subtracted."
   },
@@ -694,7 +724,9 @@
     "shortcut": "P_{\\mathrm{bottom}}=P_{\\mathrm{atm}}+\\rho gh,\\qquad W=\\rho Vg",
     "goal": "Three differently shaped open vessels hold the same liquid to the same height, but water volumes differ; compare bottom pressure and total water weight.",
     "steps": [
-      "Same rho and h give equal P_bottom=P_atm+rho g h. Unequal volumes give unequal W=rho V g. Thus bottom pressure equal and water weights unequal, printed choice 1."
+      "Bottom pressure: $P_{\\text{bottom}} = P_{\\text{atm}} + \\rho g h$. Because water depths $h$ are identical, bottom pressures are equal.",
+      "Total water weight: $W = \\rho V g$. Because vessel shapes and volumes $V$ differ, water weights are unequal.",
+      "Conclusion: Equal bottom pressures, unequal water weights (Choice A)."
     ],
     "note": "Do not infer bottom pressure from total water volume or weight. Hydrostatic pressure depends on depth, while total water weight depends on volume."
   },
@@ -760,7 +792,9 @@
     "shortcut": "m\\frac{dv}{dt}=F_0\\cos(\\omega t),\\qquad v(t)=v_0+\\frac{F_0}{m\\omega}\\sin(\\omega t)",
     "goal": "Force F(t)=F_0 cos(omega t) acts on mass m with initial velocity v_0; find v(t).",
     "steps": [
-      "Newton's law gives dv/dt=(F_0/m)cos(omega t). Integrating from 0 to t gives v(t)-v_0=(F_0/m)[sin(omega t)/omega]. Thus v(t)=v_0+[F_0/(m omega)]sin(omega t), original graphical choice 4. At t=0, sine is zero and v=v_0."
+      "Newton's 2nd Law: $m \\frac{dv}{dt} = F_0 \\cos(\\omega t) \\implies \\frac{dv}{dt} = \\frac{F_0}{m} \\cos(\\omega t)$.",
+      "Integrate over time: $v(t) - v_0 = \\int_0^t \\frac{F_0}{m} \\cos(\\omega t') dt' = \\frac{F_0}{m\\omega}\\sin(\\omega t)$.",
+      "Velocity equation: $v(t) = v_0 + \\frac{F_0}{m\\omega}\\sin(\\omega t)$ (Choice D)."
     ],
     "note": "Integrating cos(omega t) brings a 1/omega factor and a positive sine. Add v_0; at t=0 the answer must return v_0. The actual PDF choice 4 has this expression; an earlier textual transcription mislabeled its location."
   },
@@ -826,7 +860,9 @@
     "shortcut": "v=\\frac{dx}{dt}=-\\omega A\\sin(\\omega t+\\phi),\\qquad a=\\frac{d^2x}{dt^2}=-\\omega^2A\\cos(\\omega t+\\phi)=-\\omega^2x",
     "goal": "Given position x=A cos(omega t+phi), find acceleration; choose among original graphical formulas.",
     "steps": [
-      "Differentiate x=A cos(omega t+phi): v=-omega A sin(omega t+phi). Differentiate again: a=-omega^2 A cos(omega t+phi)=-omega^2 x. This exactly matches original image choice 3; option 2 includes an extra r factor."
+      "Position function: $x(t) = A\\cos(\\omega t + \\phi)$.",
+      "Velocity: $v = \\frac{dx}{dt} = -\\omega A \\sin(\\omega t + \\phi)$.",
+      "Acceleration: $a = \\frac{d^2x}{dt^2} = -\\omega^2 A \\cos(\\omega t + \\phi) = -\\omega^2 x$ (Choice C)."
     ],
     "note": "Differentiate twice and keep the negative sign. The actual PDF's correct formula is graphical choice 3; an earlier extracted text incorrectly labeled it as choice 1."
   },
@@ -876,7 +912,10 @@
     "shortcut": "T(\\mathrm{K})=t_C({}^\\circ\\mathrm{C})+273.15,\\qquad T_{\\mathrm{hot}}/T_{\\mathrm{cold}}\\approx2",
     "goal": "Which given Celsius-temperature pair has one material at twice the absolute temperature of the other?",
     "steps": [
-      "Convert each pair: a 373.15/323.15≈1.155; b 373.15/223.15≈1.672; c (233+273.15)/(-20+273.15)=506.15/253.15≈1.9994≈2. Thus choice c. With the rounded 273 K offset, 506/253=2 exactly."
+      "Convert each Celsius pair to absolute temperature in Kelvin ($T = t_C + 273.15$):",
+      "Pair A: $\\frac{100+273.15}{50+273.15} = \\frac{373.15}{323.15} \\approx 1.15$ (far from 2).",
+      "Pair B: $\\frac{100+273.15}{-50+273.15} = \\frac{373.15}{223.15} \\approx 1.67$ (not 2).",
+      "Pair C: $\\frac{233+273.15}{-20+273.15} = \\frac{506.15}{253.15} = 2.00$ (exactly twice as hot in Kelvin $\\rightarrow$ Choice C)."
     ],
     "note": "Do not double Celsius numbers directly: 100 C is not twice 50 C in absolute temperature."
   },
@@ -926,7 +965,10 @@
     "shortcut": "\\Delta V_{\\mathrm{spill}}=V_0(\\beta_{\\ell}-3\\alpha_c)\\Delta T",
     "goal": "A full aluminum container and its turpentine both heat up; asked for spilled volume.",
     "steps": [
-      "V_0=2000 cm^3 and Delta T=80-20=60 C. Liquid gain=(2000)(9.00e-4)(60)=108 cm^3. Container gain=(2000)(3*24.0e-6)(60)=8.64 cm^3. Spill=108-8.64=99.36 cm^3≈99.4 cm^3, source choice a."
+      "Initial volume $V_0 = 2000\\text{ cm}^3$, temperature rise $\\Delta T = 80 - 20 = 60^\\circ\\text{C}$.",
+      "Liquid volume expansion: $\\Delta V_\\ell = V_0 \\beta_\\ell \\Delta T = (2000)(9.00 \\times 10^{-4})(60) = 108\\text{ cm}^3$.",
+      "Container volume expansion: $\\Delta V_c = V_0 (3\\alpha_c) \\Delta T = (2000)(3 \\times 24.0 \\times 10^{-6})(60) = 8.64\\text{ cm}^3$.",
+      "Spill volume: $\\Delta V_{\\text{spill}} = 108 - 8.64 = 99.36\\text{ cm}^3 \\approx 99.4\\text{ cm}^3$ (Choice A)."
     ],
     "note": "The container expands too, so subtract its capacity increase. Use 3 alpha for volume, not alpha."
   },
