@@ -2,7 +2,7 @@
 <html lang="th">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Physics Flashcards">
@@ -11,11 +11,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/vendor/katex/katex.min.css" onerror="this.onerror=null;this.href='https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css'">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
   <style>
-    /* Embedded KaTeX fallback if vendor not reachable */
-    /* KaTeX styles bundled */
-
     :root {
       --bg: #07090e;
       --card-bg: #111625;
@@ -39,7 +36,7 @@
     body.light-theme {
       --bg: #f8fafc;
       --card-bg: #ffffff;
-      --card-border: #e2e8f0;
+      --card-border: #cbd5e1;
       --card-hover: #f1f5f9;
       --text: #0f172a;
       --text-muted: #64748b;
@@ -55,41 +52,55 @@
       margin: 0;
       padding: 0;
       -webkit-tap-highlight-color: transparent;
-      user-select: none;
     }
 
-    html, body {
+    html {
       width: 100%;
       height: 100%;
-      overflow: hidden;
+      background: var(--bg);
+    }
+
+    body {
+      width: 100%;
+      min-height: 100%;
+      min-height: -webkit-fill-available;
+      overflow-x: hidden;
+      overflow-y: auto;
       background: var(--bg);
       color: var(--text);
       font-family: var(--font-th);
       font-size: 16px;
       line-height: 1.5;
+      display: flex;
+      flex-direction: column;
     }
 
     #app {
       display: flex;
       flex-direction: column;
-      height: 100%;
+      width: 100%;
       max-width: 680px;
       margin: 0 auto;
+      min-height: 100vh;
+      min-height: 100dvh;
       padding-top: var(--safe-top);
-      padding-bottom: var(--safe-bottom);
       position: relative;
     }
 
-    /* Top Bar */
+    /* Sticky Top Header */
     header {
-      padding: 10px 16px 6px;
+      position: sticky;
+      top: 0;
+      padding: 10px 16px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       background: var(--bg);
-      z-index: 20;
+      z-index: 30;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
     }
 
     .brand {
@@ -130,8 +141,8 @@
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       color: var(--text-muted);
-      width: 38px;
-      height: 38px;
+      width: 40px;
+      height: 40px;
       border-radius: 10px;
       display: flex;
       align-items: center;
@@ -164,10 +175,10 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 6px 16px;
+      padding: 8px 16px;
       background: linear-gradient(90deg, rgba(239, 68, 68, 0.12), rgba(245, 158, 11, 0.08));
       border-bottom: 1px solid rgba(239, 68, 68, 0.2);
-      font-size: 0.8rem;
+      font-size: 0.82rem;
     }
 
     .rapid-label {
@@ -181,15 +192,15 @@
     .rapid-toggle {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
       cursor: pointer;
     }
 
     .switch {
       position: relative;
       display: inline-block;
-      width: 36px;
-      height: 20px;
+      width: 40px;
+      height: 22px;
     }
 
     .switch input {
@@ -204,14 +215,14 @@
       top: 0; left: 0; right: 0; bottom: 0;
       background-color: #334155;
       transition: .2s;
-      border-radius: 20px;
+      border-radius: 22px;
     }
 
     .slider:before {
       position: absolute;
       content: "";
-      height: 14px;
-      width: 14px;
+      height: 16px;
+      width: 16px;
       left: 3px;
       bottom: 3px;
       background-color: white;
@@ -224,19 +235,20 @@
     }
 
     input:checked + .slider:before {
-      transform: translateX(16px);
+      transform: translateX(18px);
     }
 
-    /* Topic Filter Pills (Horizontal Scroll) */
+    /* Topic Filter Pills */
     .topics-scroll {
       display: flex;
-      gap: 6px;
+      gap: 8px;
       overflow-x: auto;
-      padding: 8px 16px;
+      padding: 10px 16px;
       scrollbar-width: none;
       -ms-overflow-style: none;
       background: var(--bg);
       z-index: 10;
+      -webkit-overflow-scrolling: touch;
     }
 
     .topics-scroll::-webkit-scrollbar {
@@ -245,16 +257,17 @@
 
     .topic-pill {
       white-space: nowrap;
-      padding: 6px 12px;
+      padding: 6px 14px;
       border-radius: 20px;
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       color: var(--text-muted);
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.15s ease;
       touch-action: manipulation;
+      flex-shrink: 0;
     }
 
     .topic-pill:active {
@@ -287,18 +300,16 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 6px 16px 2px;
-      font-size: 0.75rem;
+      padding: 8px 16px 4px;
+      font-size: 0.78rem;
       color: var(--text-muted);
       font-family: var(--font-display);
     }
 
-    /* Main Flashcard Stage */
+    /* Main Flashcard Stage (Scrollable Content) */
     .stage {
       flex: 1;
-      padding: 10px 14px;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
+      padding: 10px 14px 100px;
       display: flex;
       flex-direction: column;
       position: relative;
@@ -316,7 +327,6 @@
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
       cursor: pointer;
       touch-action: manipulation;
-      min-height: 280px;
       transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
 
@@ -328,7 +338,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-size: 0.78rem;
+      font-size: 0.8rem;
     }
 
     .meta-id-group {
@@ -340,10 +350,10 @@
     .badge-id {
       font-family: var(--font-display);
       font-weight: 700;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       background: rgba(56, 189, 248, 0.12);
       color: var(--accent);
-      padding: 3px 8px;
+      padding: 4px 10px;
       border-radius: 6px;
       letter-spacing: 0.03em;
     }
@@ -357,9 +367,9 @@
       background: transparent;
       border: none;
       color: #64748b;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       cursor: pointer;
-      padding: 4px;
+      padding: 6px;
       touch-action: manipulation;
     }
 
@@ -370,69 +380,71 @@
 
     /* Question & Diagram */
     .question-body {
-      font-size: 1.02rem;
-      line-height: 1.6;
+      font-size: 1.05rem;
+      line-height: 1.65;
       color: var(--text);
       user-select: text;
+      word-break: break-word;
     }
 
     .part-banner {
-      margin-top: 8px;
-      padding: 8px 12px;
+      margin-top: 6px;
+      padding: 10px 14px;
       background: rgba(56, 189, 248, 0.08);
       border-left: 3px solid var(--accent);
       border-radius: 4px;
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 0.98rem;
       color: #e0f2fe;
+      word-break: break-word;
     }
 
     .diagram-container {
-      margin: 8px 0;
+      margin: 10px 0;
       text-align: center;
       background: #000000;
-      border-radius: 10px;
-      padding: 8px;
+      border-radius: 12px;
+      padding: 10px;
       border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .diagram-container img {
-      max-width: 100%;
-      max-height: 220px;
+      width: 100%;
+      max-height: 280px;
       object-fit: contain;
-      border-radius: 6px;
+      border-radius: 8px;
       cursor: zoom-in;
     }
 
     .diagram-zoom-hint {
-      font-size: 0.68rem;
+      font-size: 0.72rem;
       color: var(--text-muted);
-      margin-top: 4px;
+      margin-top: 6px;
     }
 
     /* Options List */
     .options-list {
       display: flex;
       flex-direction: column;
-      gap: 8px;
-      margin-top: 4px;
+      gap: 10px;
+      margin-top: 6px;
     }
 
     .option-item {
       display: flex;
       align-items: center;
-      gap: 10px;
-      padding: 10px 14px;
+      gap: 12px;
+      padding: 12px 14px;
       background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.07);
-      border-radius: 10px;
-      font-size: 0.95rem;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      font-size: 0.98rem;
       transition: all 0.2s ease;
     }
 
     .option-letter {
-      width: 26px;
-      height: 26px;
+      width: 30px;
+      height: 30px;
       border-radius: 50%;
       background: rgba(255, 255, 255, 0.08);
       color: var(--text-muted);
@@ -441,22 +453,24 @@
       justify-content: center;
       font-family: var(--font-display);
       font-weight: 700;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       flex-shrink: 0;
     }
 
     .option-label {
       flex: 1;
-      line-height: 1.4;
+      line-height: 1.45;
       user-select: text;
+      word-break: break-word;
     }
 
     .option-label img {
-      max-height: 36px;
+      max-width: 100%;
+      max-height: 48px;
       vertical-align: middle;
       background: #fff;
-      padding: 2px 6px;
-      border-radius: 4px;
+      padding: 3px 6px;
+      border-radius: 6px;
     }
 
     /* Revealed Correct Option Highlight */
@@ -465,7 +479,7 @@
       border-color: var(--success);
       color: #ecfdf5;
       font-weight: 600;
-      box-shadow: 0 0 16px rgba(16, 185, 129, 0.2);
+      box-shadow: 0 0 18px rgba(16, 185, 129, 0.25);
     }
 
     .revealed .option-item.correct-choice .option-letter {
@@ -478,12 +492,12 @@
       opacity: 0.45;
     }
 
-    /* Answer Banner (Hidden / Revealed) */
+    /* Answer Banner */
     .answer-box {
       display: none;
-      margin-top: 10px;
-      padding: 16px;
-      border-radius: 14px;
+      margin-top: 12px;
+      padding: 18px;
+      border-radius: 16px;
       background: linear-gradient(135deg, rgba(16, 185, 129, 0.16), rgba(6, 95, 70, 0.25));
       border: 2px solid var(--success);
       box-shadow: 0 0 24px rgba(16, 185, 129, 0.25);
@@ -500,7 +514,7 @@
     }
 
     .answer-header {
-      font-size: 0.72rem;
+      font-size: 0.75rem;
       text-transform: uppercase;
       font-weight: 700;
       letter-spacing: 0.08em;
@@ -513,11 +527,12 @@
 
     .answer-main {
       font-family: var(--font-display), var(--font-th);
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       font-weight: 700;
       color: #ffffff;
-      line-height: 1.4;
+      line-height: 1.45;
       user-select: text;
+      word-break: break-word;
     }
 
     /* Tap hint */
@@ -526,10 +541,10 @@
       align-items: center;
       justify-content: center;
       gap: 6px;
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       color: var(--text-muted);
-      margin-top: 4px;
-      padding: 6px;
+      margin-top: 6px;
+      padding: 8px;
       background: rgba(255, 255, 255, 0.02);
       border-radius: 8px;
       border: 1px dashed rgba(255, 255, 255, 0.1);
@@ -539,49 +554,59 @@
       display: none;
     }
 
-    /* Fixed Bottom Action Controls */
+    /* Fixed Bottom Action Controls (Thumb Zone) */
     footer {
-      padding: 10px 16px calc(10px + var(--safe-bottom));
-      background: var(--bg);
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 10px 16px calc(12px + var(--safe-bottom));
+      background: rgba(7, 9, 14, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
       display: flex;
       align-items: center;
-      gap: 10px;
-      z-index: 20;
+      gap: 12px;
+      z-index: 40;
+    }
+
+    body.light-theme footer {
+      background: rgba(248, 250, 252, 0.94);
     }
 
     .nav-btn {
       height: 52px;
-      padding: 0 16px;
+      padding: 0 18px;
       border-radius: 14px;
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       color: var(--text);
       font-family: var(--font-display);
-      font-size: 0.95rem;
+      font-size: 1.1rem;
       font-weight: 600;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 6px;
       touch-action: manipulation;
       transition: all 0.15s ease;
+      flex-shrink: 0;
     }
 
     .nav-btn:active {
-      transform: scale(0.95);
+      transform: scale(0.93);
       background: var(--card-hover);
     }
 
     .nav-btn-prev {
       width: 54px;
-      flex-shrink: 0;
     }
 
     .nav-btn-next {
       width: 54px;
-      flex-shrink: 0;
     }
 
     .action-main-btn {
@@ -618,7 +643,7 @@
       display: none;
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.92);
+      background: rgba(0, 0, 0, 0.94);
       z-index: 100;
       align-items: center;
       justify-content: center;
@@ -770,9 +795,9 @@
     <img class="modal-content" id="modalImg" src="" alt="Enlarged Diagram">
   </div>
 
-  <!-- Embedded KaTeX JS (Bundled with CDN fallback) -->
-  <script src="/vendor/katex/katex.min.js" onerror="this.onerror=null;var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js';document.head.appendChild(s);"></script>
-  <script src="/vendor/katex/contrib/auto-render.min.js" onerror="this.onerror=null;var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js';document.head.appendChild(s);"></script>
+  <!-- CDN KaTeX Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
 
   <!-- Flashcards App Script & Embedded Dataset -->
   <script>
@@ -823,7 +848,6 @@
     const modalCloseBtn = document.getElementById('modalCloseBtn');
     const topicsContainer = document.getElementById('topicsContainer');
 
-    // Filter & Order
     function updateCardList() {
       let filtered = [...ALL_CARDS];
 
@@ -836,7 +860,6 @@
       }
 
       if (state.isShuffle) {
-        // Fisher-Yates shuffle
         for (let i = filtered.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1));
           [filtered[i], filtered[j]] = [filtered[j], filtered[i]];
@@ -850,10 +873,9 @@
       updateStats();
     }
 
-    // Render Math safely
     function renderMath(element) {
       if (!window.renderMathInElement) {
-        setTimeout(() => renderMath(element), 80);
+        setTimeout(() => renderMath(element), 100);
         return;
       }
       try {
@@ -869,7 +891,6 @@
       }
     }
 
-    // Render Current Card
     function renderCurrentCard() {
       if (state.cards.length === 0) {
         cardElement.classList.remove('revealed');
@@ -901,7 +922,7 @@
       cardQuestion.textContent = c.question;
       renderMath(cardQuestion);
 
-      // Subpart if exists
+      // Subpart
       if (c.partText) {
         cardPart.textContent = c.partText;
         cardPart.style.display = 'block';
@@ -944,16 +965,16 @@
       answerText.textContent = c.cleanAnswer;
       renderMath(answerText);
 
-      // State reset
+      // Reset card state & scroll window to top
       state.isRevealed = false;
       cardElement.classList.remove('revealed');
       actionBtn.classList.remove('btn-revealed');
       actionBtnText.textContent = 'Reveal Answer';
 
+      window.scrollTo({ top: 0, behavior: 'instant' });
       updateStats();
     }
 
-    // Toggle Reveal Answer
     function toggleReveal() {
       if (state.cards.length === 0) return;
 
@@ -964,7 +985,6 @@
         actionBtnText.textContent = 'Next Card ▶';
         if (navigator.vibrate) navigator.vibrate(15);
       } else {
-        // Already revealed: go to next
         nextCard();
       }
     }
@@ -974,7 +994,7 @@
       if (state.currentIndex < state.cards.length - 1) {
         state.currentIndex++;
       } else {
-        state.currentIndex = 0; // loop back to first
+        state.currentIndex = 0;
       }
       renderCurrentCard();
     }
@@ -1013,12 +1033,9 @@
       progressFill.style.width = pct + '%';
     }
 
-    // Event Listeners
     actionBtn.addEventListener('click', toggleReveal);
 
-    // Clicking card
     cardElement.addEventListener('click', (e) => {
-      // Don't flip if user clicked diagram image or star
       if (e.target.closest('#cardStarBtn') || e.target.closest('#diagramImg')) return;
 
       if (state.isRapidFire) {
@@ -1045,7 +1062,7 @@
       toggleStarCurrent();
     });
 
-    // Touch Swipe Navigation
+    // Touch Swipe
     let touchStartX = 0;
     let touchStartY = 0;
     cardElement.addEventListener('touchstart', (e) => {
@@ -1065,7 +1082,6 @@
       }
     }, { passive: true });
 
-    // Header buttons
     shuffleBtn.addEventListener('click', () => {
       state.isShuffle = !state.isShuffle;
       shuffleBtn.classList.toggle('active', state.isShuffle);
@@ -1092,7 +1108,6 @@
       state.isRapidFire = e.target.checked;
     });
 
-    // Topic Pills
     topicsContainer.addEventListener('click', (e) => {
       const pill = e.target.closest('.topic-pill');
       if (!pill) return;
@@ -1102,7 +1117,6 @@
       updateCardList();
     });
 
-    // Image Zoom Modal
     diagramImg.addEventListener('click', (e) => {
       e.stopPropagation();
       modalImg.src = diagramImg.src;
@@ -1117,7 +1131,6 @@
       zoomModal.classList.remove('open');
     });
 
-    // Keyboard navigation
     window.addEventListener('keydown', (e) => {
       if (e.key === ' ' || e.key === 'Enter') {
         e.preventDefault();
@@ -1133,7 +1146,6 @@
       }
     });
 
-    // Initialize
     updateCardList();
   </script>
 </body>
