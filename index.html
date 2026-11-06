@@ -188,14 +188,20 @@
     /* Mode Bars */
     .controls-bar {
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
       padding: 8px 16px;
       background: linear-gradient(90deg, rgba(168, 85, 247, 0.12), rgba(56, 189, 248, 0.08));
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      gap: 8px;
+      gap: 12px;
       font-size: 0.82rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .controls-bar::-webkit-scrollbar {
+      display: none;
     }
 
     body.light-theme .controls-bar {
@@ -206,6 +212,7 @@
       display: flex;
       align-items: center;
       gap: 12px;
+      flex-shrink: 0;
     }
 
     .mode-toggle {
@@ -215,6 +222,7 @@
       cursor: pointer;
       user-select: none;
       font-weight: 600;
+      white-space: nowrap;
     }
 
     .mode-toggle.shortcut-style {
@@ -223,6 +231,10 @@
 
     .mode-toggle.rapid-style {
       color: #f87171;
+    }
+
+    .mode-toggle.random-choices-style {
+      color: #34d399;
     }
 
     .switch {
@@ -265,6 +277,10 @@
 
     input:checked + .slider.slider-red {
       background-color: #ef4444;
+    }
+
+    input:checked + .slider.slider-green {
+      background-color: #10b981;
     }
 
     input:checked + .slider:before {
@@ -1255,6 +1271,15 @@
         </label>
       </div>
       <div class="bar-group">
+        <label class="mode-toggle random-choices-style" title="Randomize choice positions (A/B/C/D) to avoid memorizing by placement">
+          <span>🔀 Random Choices</span>
+          <span class="switch">
+            <input type="checkbox" id="randomChoicesToggle" checked>
+            <span class="slider slider-green"></span>
+          </span>
+        </label>
+      </div>
+      <div class="bar-group">
         <label class="mode-toggle rapid-style" title="Auto-advance on picking an option">
           <span style="font-size: 0.76rem; color: var(--text-muted)">1-Tap Advance</span>
           <span class="switch">
@@ -1423,6 +1448,8 @@
       isStarOnly: false,
       isRapidFire: false,
       isShortcutMode: false,
+      isRandomChoices: true,
+      currentDisplayedOptions: [],
       starredIds: new Set(JSON.parse(localStorage.getItem('gp1_starred') || '[]'))
     };
 
@@ -1469,6 +1496,7 @@
     const themeToggleBtn = document.getElementById('themeToggleBtn');
     const rapidFireToggle = document.getElementById('rapidFireToggle');
     const shortcutModeToggle = document.getElementById('shortcutModeToggle');
+    const randomChoicesToggle = document.getElementById('randomChoicesToggle');
 
     const zoomModal = document.getElementById('zoomModal');
     const modalImg = document.getElementById('modalImg');
@@ -1638,23 +1666,39 @@
       // Options
       cardOptions.innerHTML = '';
       if (c.options && c.options.length > 0) {
-        c.options.forEach(opt => {
+        let displayOpts = [...c.options];
+        if (state.isRandomChoices) {
+          // Fisher-Yates shuffle options array for presentation
+          for (let i = displayOpts.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [displayOpts[i], displayOpts[j]] = [displayOpts[j], displayOpts[i]];
+          }
+        }
+
+        const slotLetters = ['a', 'b', 'c', 'd', 'e', 'f'];
+        state.currentDisplayedOptions = displayOpts.map((opt, idx) => ({
+          ...opt,
+          displayLetter: slotLetters[idx] || opt.letter
+        }));
+
+        state.currentDisplayedOptions.forEach(opt => {
           const optDiv = document.createElement('div');
           optDiv.className = 'option-item' + (opt.isCorrect ? ' correct-choice' : '');
-          optDiv.dataset.letter = opt.letter;
+          optDiv.dataset.displayLetter = opt.displayLetter;
+          optDiv.dataset.origLetter = opt.letter;
 
           let labelContent = opt.label;
           if (opt.image) {
             labelContent = '<img src="' + (opt.image.base64 || opt.image.path) + '" alt="' + opt.image.alt + '">';
           }
 
-          optDiv.innerHTML = '<span class="option-letter">' + opt.letter.toUpperCase() + '</span>' +
+          optDiv.innerHTML = '<span class="option-letter">' + opt.displayLetter.toUpperCase() + '</span>' +
                              '<span class="option-label">' + labelContent + '</span>';
 
           optDiv.addEventListener('click', (e) => {
             e.stopPropagation();
             if (!state.isRevealed) {
-              selectOption(opt.letter);
+              selectOption(opt.displayLetter);
               if (state.isRapidFire) {
                 toggleReveal();
               }
@@ -1664,6 +1708,8 @@
           cardOptions.appendChild(optDiv);
           renderMath(optDiv);
         });
+      } else {
+        state.currentDisplayedOptions = [];
       }
 
       // Answer Box
@@ -1742,10 +1788,10 @@
       if (navigator.vibrate) navigator.vibrate(10);
     }
 
-    function selectOption(letter) {
-      state.userChoice = letter;
+    function selectOption(displayLetter) {
+      state.userChoice = displayLetter;
       document.querySelectorAll('.option-item').forEach(el => {
-        el.classList.toggle('selected-user', el.dataset.letter === letter);
+        el.classList.toggle('selected-user', el.dataset.displayLetter === displayLetter);
       });
       if (navigator.vibrate) navigator.vibrate(12);
     }
@@ -1760,10 +1806,12 @@
         actionBtnText.textContent = 'Next Card ▶';
 
         // Check if user choice was wrong and highlight
-        const c = state.cards[state.currentIndex];
-        if (state.userChoice && c.correctChoiceLetter && state.userChoice !== c.correctChoiceLetter) {
-          const wrongEl = document.querySelector('.option-item[data-letter="' + state.userChoice + '"]');
-          if (wrongEl) wrongEl.classList.add('wrong-choice');
+        if (state.userChoice) {
+          const chosenOpt = state.currentDisplayedOptions.find(o => o.displayLetter === state.userChoice);
+          if (chosenOpt && !chosenOpt.isCorrect) {
+            const wrongEl = document.querySelector('.option-item[data-display-letter="' + state.userChoice + '"]');
+            if (wrongEl) wrongEl.classList.add('wrong-choice');
+          }
         }
 
         // In Shortcut Mode, automatically expand solution for maximum drill efficiency
@@ -1885,6 +1933,12 @@
 
     rapidFireToggle.addEventListener('change', (e) => {
       state.isRapidFire = e.target.checked;
+    });
+
+    randomChoicesToggle.addEventListener('change', (e) => {
+      state.isRandomChoices = e.target.checked;
+      // Re-render current card so options are re-ordered immediately
+      renderCurrentCard();
     });
 
     shortcutModeToggle.addEventListener('change', (e) => {
